@@ -1,0 +1,12 @@
+{
+  "name": "shopterra-slate",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "slate watch",
+    "deploy": "slate deploy -e production"
+  },
+  "devDependencies": {
+    "@shopify/slate-tools": "0.13.0",
+    "shopterra-styles": "https://github.com/superseriouscompany/shopterra-styles.git"
+  }
+}
