@@ -14,31 +14,6 @@
       </div>
     {% endif %}
 
-    {% if shop.customer_accounts_enabled %}
-      <ul>
-        {% if customer %}
-          <li>
-            {% if customer.first_name != blank %}
-              {% capture first_name %}<a href="/account">{{ customer.first_name }}</a>{% endcapture %}
-              {{ 'layout.customer.logged_in_as_html' | t: first_name: first_name }}
-            {% else %}
-              <a href="/account">{{ 'layout.customer.account' | t }}</a>
-            {% endif %}
-          </li>
-          <li>
-            {{ 'layout.customer.log_out' | t | customer_logout_link }}
-          </li>
-        {% else %}
-          <li>
-            {{ 'layout.customer.log_in' | t | customer_login_link }}
-          </li>
-          <li>
-            {{ 'layout.customer.create_account' | t | customer_register_link }}
-          </li>
-        {% endif %}
-      </ul>
-    {% endif %}
-
     <nav role="navigation">
       <ul class="site-nav">
         {% for link in linklists[section.settings.main_linklist].links %}
@@ -63,13 +38,37 @@
             </li>
           {% endif %}
         {% endfor %}
+
+        {% if shop.customer_accounts_enabled %}
+            {% if customer %}
+              <li>
+                {% if customer.first_name != blank %}
+                  {% capture first_name %}<a href="/account">{{ customer.first_name }}</a>{% endcapture %}
+                  {{ 'layout.customer.logged_in_as_html' | t: first_name: first_name }}
+                {% else %}
+                  <a href="/account">{{ 'layout.customer.account' | t }}</a>
+                {% endif %}
+              </li>
+              <li>
+                {{ 'layout.customer.log_out' | t | customer_logout_link }}
+              </li>
+            {% else %}
+              <li>
+                {{ 'layout.customer.create_account' | t | customer_register_link }}
+                </li>
+              <li>
+                {{ 'layout.customer.log_in' | t | customer_login_link }}
+              </li>
+            {% endif %}
+        {% endif %}
+
         <li>
-        <a href="/cart">
-          {% include 'icon-cart' %}
-          {% if cart.item_count > 0 %}
-            {{ cart.item_count }}
-          {% endif %}
-        </a>
+          <a href="/cart">
+            {% include 'icon-cart' %}
+            {% if cart.item_count > 0 %}
+              {{ cart.item_count }}
+            {% endif %}
+          </a>
         </li>
       </ul>
     </nav>
