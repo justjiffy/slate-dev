@@ -1,39 +1,16 @@
 /*================ General layout styles ================*/
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
 body,
 html {
-  font-family: sans-serif;
-  margin: 0;
+  background-color: $color-body;
+  margin: 20px 0;
+  font-family: "Lato", sans-serif;
 }
-
-footer {
-  margin-top: 2em;
-  text-align: center;
-}
-
-.divider {
-  display: flex;
-  justify-content: space-around;
-  hr {
-    width: 100%;
-  }
-  img {
-    width: 30px;
-    height: 30px;
-    margin-top: 7px;
-  }
-}
-
-.About {
-  .logo {
-    max-width: 300px;
-    margin: 0 auto;
-  }
-}
-.Link {
-  padding: 40px 30px;
-  a {
-    color: #3aaab2;
-    text-decoration: none;
-    line-height: 40px;
-  }
+.page-width {
+  @include clearfix();
+  width: 77%;
+  max-width: $width-site;
+  padding: 0 $gutter;
+  margin: 0 auto;
 }

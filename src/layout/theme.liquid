@@ -32,7 +32,7 @@
   {% include 'social-meta-tags' %}
 
   {{ 'theme.scss.css' | asset_url | stylesheet_tag }}
-  <link rel="stylesheet" href="https://stores.shopterra.com/static/css/main.54ac57d9.css" />
+
   <script>
     document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
     window.theme = {
@@ -76,11 +76,11 @@
     </noscript>
 
     <!-- End Facebook Pixel Code -->
-    
+
   {{ content_for_header }}
 </head>
 
-<body id="{{ page_title | handle }}" class="App template-{{template.name | handle}}">
+<body id="{{ page_title | handle }}" class="page-width">
 
 <div class="Header">
   {% section 'header' %}

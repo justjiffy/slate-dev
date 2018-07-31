@@ -1,71 +1,28 @@
 @charset "UTF-8";
-/*================ SHARED SYLESHEETS FOR SHOPTERRA AND SELLER.SHOPTERRA =================*/
-@import "../../node_modules/shopterra-styles/index.scss";
+/*============================================================================
+  [replace with theme name] | Built with Slate
+    - You cannot use native CSS/Sass @imports in this file without a build script
+==============================================================================*/
 
-.About-Buyer {
-  background-image: url(../assets/background_1_mobile.png);
-  @include xs() {
-    background-size: 140%;
-  }
-  @include desktop() {
-    background-image: url(../assets/background_1_desktop.png);
-  }
-  h1 {
-    @include desktop() {
-      padding-top: 10px !important;
-    }
-  }
-  h3 {
-    font-size: 16px !important;
-  }
-}
+/*================ UTILS ================*/
+@import url('tools/mixins.scss');
 
-.About {
-  .seller {
-    width: 250px;
-    margin: 20px 0;
-  }
-}
+/*================ SETTINGS ================*/
+@import url('settings/variables.scss.liquid');
 
-.Rating {
-  margin-top: 0 !important;
-  li {
-    list-style-image: url("../assets/icon_check.svg");
-  }
-  .sans {
-    font-family: $sans;
-    padding: 20px;
-    font-size: 16px;
-    line-height: 24px;
-  }
-  .seller {
-    max-width: 500px;
-  }
-}
+/*================ COMMON ================*/
+@import url('global/normalize.scss');
+@import url('global/slate-reset.scss');
+@import url('global/helper-classes.scss');
+@import url('global/grid.scss');
+@import url('global/layout.scss');
+@import url('global/icons.scss');
+@import url('global/rte.scss');
+@import url('global/responsive-tables.scss');
+@import url('global/links-buttons.scss');
+@import url('global/forms.scss');
+@import url('global/blank-states.scss');
 
-.Why {
-  background-image: url("../assets/background_2.jpg");
-}
-
-.divider {
-  margin-top: 30px;
-  display: flex;
-
-  * {
-    align-self: center;
-  }
-  img {
-    width: 10%;
-    max-width: 30px;
-  }
-  hr {
-    width: 45%;
-    margin: 0 20px;
-  }
-}
-
-.Link {
-  p {
-    margin-bottom: 10px;
-  }
-}
+/*================ MODULES ================*/
+@import url('modules/site-header.scss');
+@import url('modules/gift-card-template.scss');

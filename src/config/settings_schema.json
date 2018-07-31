@@ -1,7 +1,7 @@
 [
   {
     "name": "theme_info",
-    "theme_name": "Slate-Dev",
+    "theme_name": "Slate",
     "theme_version": "0.11.0",
     "theme_author": "Shopify",
     "theme_documentation_url": "https://shopify.github.io/slate/",
@@ -47,14 +47,21 @@
         "type": "color",
         "id": "color_primary",
         "label": "Primary color",
-        "default": "#000",
+        "default": "#FF0",
         "info": "Used for text links, and primary buttons"
+      },
+      {
+        "type": "color",
+        "id": "color_secondary",
+        "label": "Secondary color",
+        "default": "#35a6b0",
+        "info": "Used for text links, and alternative buttons"
       },
       {
         "type": "color",
         "id": "color_body_text",
         "label": "Text color",
-        "default": "#000",
+        "default": "#FF0",
         "info": "Color used for content and paragraph text"
       }
     ]

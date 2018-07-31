@@ -6,7 +6,6 @@
     "deploy": "slate deploy -e production"
   },
   "devDependencies": {
-    "@shopify/slate-tools": "0.13.0",
-    "shopterra-styles": "https://github.com/superseriouscompany/shopterra-styles.git"
+    "@shopify/slate-tools": "0.13.0"
   }
 }
