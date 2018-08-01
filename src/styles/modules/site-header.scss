@@ -49,6 +49,8 @@ header {
 
   .btn {
     border: none !important;
+    display: flex;
+    align-items: center;
     color: $color-secondary;
 
     span {
