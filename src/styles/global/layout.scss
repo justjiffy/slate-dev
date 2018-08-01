@@ -9,7 +9,7 @@ html {
 }
 .page-width {
   @include clearfix();
-  width: 77%;
+  width: 90%;
   max-width: $width-site;
   padding: 0 $gutter;
   margin: 0 auto;

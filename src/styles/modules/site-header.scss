@@ -22,3 +22,53 @@ header {
     margin-left: 35px;
   }
 }
+
+.subNav {
+  border-top: 1px solid $color-border;
+  border-bottom: 1px solid $color-border;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 16px;
+
+  ul {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    padding: 0;
+    li {
+      list-style: none;
+      margin-right: 20px;
+      a {
+        color: $color-secondary;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .btn {
+    border: none !important;
+    color: $color-secondary;
+
+    span {
+      margin-left: 20px;
+    }
+  }
+
+  form {
+    border-left: 1px solid $color-border;
+    padding-left: 20px;
+    height: 52px;
+    justify-content: center;
+    display: flex;
+  }
+  input {
+    border: none;
+  }
+  input:active, input:focus {
+    outline: none;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+  }
+}
