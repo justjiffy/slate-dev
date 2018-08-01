@@ -80,13 +80,13 @@
   {{ content_for_header }}
 </head>
 
-<body id="{{ page_title | handle }}" class="page-width">
+<body id="{{ page_title | handle }}">
 
-<div class="Header">
+<div class="Header" class="page-width">
   {% section 'header' %}
 </div>
 
-  <main role="main" id="MainContent" class="About About-Buyer">
+  <!-- <main role="main" id="MainContent" class="About About-Buyer">
     <h1>Natural, sustainable living and peace of mind coming together in harmony</h1>
     <h3> Shop for truly natural products with the help of easy to understand, transparent information about how safe they are for you and the impact they have on the environment</h3>
     {% section 'signup' %}
@@ -94,9 +94,9 @@
     <div class="signup">
       {% section 'signup' %}
     </div>
-  </main>
+  </main> -->
 
-  <div style="display: none">
+  <div class="page-width">
     {{ content_for_layout }}
   </div>
 
