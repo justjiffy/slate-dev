@@ -19,54 +19,91 @@ html {
   display: none !important;
 }
 
-main {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: $color-border 1px solid;
-  padding-bottom: 80px;
+//main theme
+  main {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: $color-border 1px solid;
+    padding-bottom: 80px;
 
-  span {
-    width: 180px;
-    position: relative;
+    span {
+      width: 180px;
+      position: relative;
 
-    img {
-      position: absolute;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      margin: auto;
+      img {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+    }
+    div {
+      max-width: 730px;
+
+    }
+    h1 {
+      color: $color-secondary;
+      font-weight: 300;
+      font-size: 52px;
+      text-align: center;
+      padding: 0 50px;
+    }
+
+    form {
+      width: 100%;
+      padding: 0 50px;
+      display: flex;
+    }
+
+    input {
+      width: inherit;
+      font-size: 20px;
+      padding: 20px;
+      border-radius: 4px 0 0 4px;
+    }
+
+    .btn {
+      background-color: $color-secondary;
+      color: white;
+      width: 65px;
+      height: 65px;
+      border-radius: 0px 4px 4px 0px;
     }
   }
+//
+
+section {
+  padding-top: 40px;
+  display: flex;
+
+
   div {
-    max-width: 730px;
-
-  }
-  h1 {
-    color: $color-secondary;
-    font-weight: 300;
-    font-size: 52px;
     text-align: center;
-    padding: 0 50px;
-  }
-
-  form {
-    width: 100%;
-    padding: 0 50px;
-    display: flex;
-  }
-
-  input {
-    width: inherit;
-    font-size: 20px;
     padding: 20px;
-    border-radius: 4px 0 0 4px;
-  }
 
-  .btn {
-    background-color: $color-secondary;
-    color: white;
-    width: 65px;
-    height: 65px;
-    border-radius: 0px 4px 4px 0px;
+    &:nth-child(2) {
+        border-right: 1px solid $color-border;
+        border-left: 1px solid $color-border;
+    }
+
+    h2 {
+      font-weight: 300;
+      color: $color-secondary;
+      font-size: 26px;
+    }
+
+    p {
+      color: #384b51;
+      opacity: 0.69;
+      font-size: 14px;
+    }
+
+    a {
+      font-weight: bold;
+      color: $color-secondary;
+      text-decoration: none;
+      font-size: 14px;
+    }
   }
 }
