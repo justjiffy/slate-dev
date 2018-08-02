@@ -21,6 +21,25 @@ select {
   }
 }
 
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $color-border;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $color-border;
+}
+
+input:active, input:focus {
+  outline: none;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: $color-border;
+}
 textarea {
   min-height: 100px;
 }

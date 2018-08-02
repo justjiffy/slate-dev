@@ -1,1 +1,23 @@
+<main>
+  <span>{{ 'main_left.png' | asset_url | img_tag: 'main_left' }}</span>
+  <div>
+    <h1>Natural, sustainable living and peace of mind coming together in harmony</h1>
+      <form action="/search" method="get" role="search">
+      <label for="Search" class="label-hidden">
+      {{ 'general.search.placeholder' | t }}
+      </label>
+      <input type="search"
+           name="q"
+           id="Search"
+           value="{{ search.terms | escape }}"
+           placeholder="Search for things good for you and kind to earth">
+      <button type="submit" class="btn">
+      {% include 'icon-search' %}
+      <span class="icon-fallback-text">{{ 'general.search.submit' | t }}</span>
+      </button>
+      </form>
+    </div>
+    <span>{{ 'main_right.png' | asset_url | img_tag: 'main_right' }}<span>
+</main>
+
 {{ content_for_index }}

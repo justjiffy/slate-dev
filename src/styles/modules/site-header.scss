@@ -64,14 +64,9 @@ header {
     height: 52px;
     justify-content: center;
     display: flex;
-  }
-  input {
-    border: none;
-  }
-  input:active, input:focus {
-    outline: none;
-    -webkit-appearance: none !important;
-    -moz-appearance: none !important;
-    appearance: none !important;
+
+    input {
+      border: none;
+    }
   }
 }

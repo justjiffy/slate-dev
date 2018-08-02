@@ -1,5 +1,5 @@
 /*================ General layout styles ================*/
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
 
 body,
 html {
@@ -17,4 +17,56 @@ html {
 
 .admin-bar {
   display: none !important;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: $color-border 1px solid;
+  padding-bottom: 80px;
+
+  span {
+    width: 180px;
+    position: relative;
+
+    img {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+  div {
+    max-width: 730px;
+
+  }
+  h1 {
+    color: $color-secondary;
+    font-weight: 300;
+    font-size: 52px;
+    text-align: center;
+    padding: 0 50px;
+  }
+
+  form {
+    width: 100%;
+    padding: 0 50px;
+    display: flex;
+  }
+
+  input {
+    width: inherit;
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 4px 0 0 4px;
+  }
+
+  .btn {
+    background-color: $color-secondary;
+    color: white;
+    width: 65px;
+    height: 65px;
+    border-radius: 0px 4px 4px 0px;
+  }
 }
