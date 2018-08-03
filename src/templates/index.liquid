@@ -50,3 +50,30 @@
 </section>
 
 {{ content_for_index }}
+
+ <div class="manufacturers">
+   <h2>
+     Our manufacturers of the week.<br />
+     Customers love their products and their products support the planet and your natural lifestyle.
+   </h2>
+   <figure>
+     {{ "manufacturer_sinclair.png" | asset_url | img_tag: "Manufacturer" }}
+     <figcaption>
+       <h3>Ana Sinclair</h3>
+       <p>*****</p>
+       <p>Ana’s shop has many organic daily care products, from a large variety of soaps and shampoos, to face...</p>
+       <span class="featured-collection">
+         <div class="item" style="border-color: #35a6b0; padding-bottom: 20px;">
+           <p>Product 1</p>
+           {{ "product_1.png" | asset_url | img_tag: "Product 1" }}
+         </div>
+         <div class="item" style="border-color: #35a6b0; padding-bottom: 20px;">
+           <p>Product 1</p>
+           {{ "product_2.png" | asset_url | img_tag: "Product 2" }}
+         </div>
+
+       </span>
+     </figcaption>
+   </figure>
+
+ </div>

@@ -9,6 +9,8 @@ select {
   border: 1px solid $color-border;
   border-radius: 0;
   max-width: 100%;
+  background: white !important;
+
 
   &:focus {
     // You should add some focus styles
@@ -35,6 +37,11 @@ input:active, input:focus {
   -webkit-appearance: none !important;
   -moz-appearance: none !important;
   appearance: none !important;
+  background: white !important;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
 
 ::-ms-input-placeholder { /* Microsoft Edge */

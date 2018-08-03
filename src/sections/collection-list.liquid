@@ -2,11 +2,20 @@
   <h2>{{ section.settings.title | escape }}</h2>
 {% endif %}
 
+
 {% for block in section.blocks limit: section.blocks.size %}
-  <div {{ block.shopify_attributes }}>
+  <div {{ block.shopify_attributes }} class="collection">
     {%- assign collection = collections[block.settings.collection] -%}
 
     <a href="{% if collection == empty %}#{% else %}{{ collection.url }}{% endif %}">
+      <p>
+        {% if collection == empty %}
+        {{ 'homepage.onboarding.collection_title' | t }}
+        {% else %}
+        {{ collection.title }}
+        {% endif %}
+      </p>
+
       {% if collection.image != blank %}
         {{ collection | img_url: '480x480' | img_tag: collection.title }}
       {% elsif collection.products.first != blank %}
@@ -16,13 +25,6 @@
         {{ 'collection-' | append: current | placeholder_svg_tag: 'placeholder-svg placeholder-svg--small' }}
       {% endif %}
 
-      <p>
-        {% if collection == empty %}
-          {{ 'homepage.onboarding.collection_title' | t }}
-        {% else %}
-          {{ collection.title }}
-        {% endif %}
-      </p>
     </a>
   </div>
 {% endfor %}

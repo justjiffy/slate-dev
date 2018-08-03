@@ -1,20 +1,23 @@
 {% if section.settings.title != blank %}
-  <h2>{{ section.settings.title | escape }}</h2>
+  <h2 class="featured-title">{{ section.settings.title | escape }}</h2>
 {% endif %}
 
+<div class="featured-collection">
 {%- assign collection = collections[section.settings.collection] -%}
 
-{% for product in collection.products limit: 6 %}
+{% for product in collection.products limit: 4 %}
+<div class="item">
+  <p>{{ product.title }}</p>
   <a href="{{ product.url | within: collection }}">
 
     {% if product.featured_image != blank %}
       {{ product.featured_image.src | img_url: '480x480' | img_tag: product.title }}
     {% endif %}
 
-    <p>{{ product.title }}</p>
   </a>
 
-  <p>
+  <span class="details">
+    <p>
     {% if product.compare_at_price > product.price %}
 
       {% if product.price_varies %}
@@ -35,7 +38,10 @@
       {% endif %}
 
     {% endif %}
-  </p>
+    </p>
+    <span>{{ product.description }}</span>
+  </span>
+</div>
 {% else %}
 
   {% for i in (1..6) %}
@@ -52,15 +58,17 @@
   {% endfor %}
 {% endfor %}
 
+</div>
+
 {% schema %}
   {
-    "name": "Featured collection",
+    "name": "Most loved",
     "settings": [
       {
         "type": "text",
         "id": "title",
         "label": "Heading",
-        "default": "Featured collection"
+        "default": "Most loved products in our community"
       },
       {
         "id": "collection",
@@ -70,7 +78,7 @@
     ],
     "presets": [
       {
-        "name": "Featured collection",
+        "name": "Most loved",
         "category": "Collection"
       }
     ]
