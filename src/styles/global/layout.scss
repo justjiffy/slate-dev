@@ -208,6 +208,12 @@ figure {
       font-weight: 400;
       margin: 0;
     }
+    h2 {
+      font-weight: 300;
+      font-size: 34px;
+      line-height: 36px;
+      color: #7a7a7a;
+    }
     p {
       font-size: 18px;
       color: #909c9f;
@@ -220,6 +226,17 @@ figure {
       color: white;
       font-size: 22px;
       height: 70px;
+      font-weight: 700;
+    }
+    .btn-md {
+      background-color: $color-secondary;
+      width: 360px;
+      margin: auto;
+      margin-top: 30px;
+      color: white;
+      font-size: 22px;
+      height: 70px;
+      font-weight: 700;
     }
   }
 }
