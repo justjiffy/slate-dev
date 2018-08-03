@@ -57,10 +57,16 @@
      Customers love their products and their products support the planet and your natural lifestyle.
    </h2>
    <figure>
-     {{ "manufacturer_sinclair.png" | asset_url | img_tag: "Manufacturer" }}
+     {{ "manufacturer_sinclair.png" | asset_url | img_tag: "Manufacturer", 'mf' }}
      <figcaption>
        <h3>Ana Sinclair</h3>
-       <p>*****</p>
+       <span>
+         {{ 'star.png' | asset_url | img_tag: 'star '}}
+         {{ 'star.png' | asset_url | img_tag: 'star '}}
+         {{ 'star.png' | asset_url | img_tag: 'star '}}
+         {{ 'star.png' | asset_url | img_tag: 'star '}}
+         {{ 'star.png' | asset_url | img_tag: 'star '}}
+       </span>
        <p>Ana’s shop has many organic daily care products, from a large variety of soaps and shampoos, to face...</p>
        <span class="featured-collection">
          <div class="item" style="border-color: #35a6b0; padding-bottom: 20px;">
@@ -75,5 +81,6 @@
        <button class='btn-lg'>Visit Ana's Shop</button>
      </figcaption>
    </figure>
-
  </div>
+
+   {% section 'collection-list' %}

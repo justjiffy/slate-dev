@@ -176,8 +176,34 @@ section {
 .manufacturers {
   margin-top: 150px;
   text-align: center;
+
+  h2 {
+    font-weight: 300;
+    font-size: 34px;
+    line-height: 36px;
+    color: #7a7a7a;
+  }
 }
 figure {
   display: flex;
   align-items: center;
+
+  .mf {
+    max-width: 540px;
+    padding-right: 30px;
+  }
+
+  figcaption {
+    h3 {
+      color: $color-secondary;
+      font-size: 32px;
+      font-weight: 400;
+      margin: 0;
+    }
+    p {
+      font-size: 18px;
+      color: #909c9f;
+      padding: 0 20px;
+    }
+  }
 }
