@@ -57,7 +57,7 @@
      Customers love their products and their products support the planet and your natural lifestyle.
    </h2>
    <figure>
-     {{ "manufacturer_sinclair.png" | asset_url | img_tag: "Manufacturer", 'mf' }}
+     {{ "manufacturer_sinclair.png" | asset_url | img_tag: "Manufacturer", 'padded' }}
      <figcaption>
        <h3>Ana Sinclair</h3>
        <span>
@@ -83,13 +83,68 @@
    </figure>
  </div>
 
- <div>
+ <div class="learn-more">
    <figure>
      <figcaption>
        <h2>Shop for truly natural products with the help of easy to understand, transparent information about how safe they are for you and the impact they have on the environment.</h2>
        <button class='btn-md'>Learn More</button>
      </figcaption>
+     {{ "learn-more.png" | asset_url | img_tag: "Learn More", 'padded' }}
    </figure>
  </div>
 
-   {% section 'collection-list' %}
+ <div class="rating">
+   <h2>Shopterra Rating System&copy;</h2>
+   {{ "rating.png" | asset_url | img_tag: "Rating System" }}
+   <p>
+     Shopterra’s simple to use rating system asseses safety and source of ingredients, and the environmental impact of all products we bring to you. Our rating system was developed through extensive industry experience, and in collaboration with the highly respected NSF international.
+   </p>
+   <p>
+     {{ "rating_logo_shopterra.png" | asset_url | img_tag: "Shopterra" }}
+     rating is verified by
+     {{ "rating_logo_nsf.png" | asset_url | img_tag: "NSF" }}
+   </p>
+   <p>
+     Our rating system is <span class="large">Independent. Transparent. Verified.</span>
+   </p>
+   <button class='btn-md'>Learn More</button>
+ </div>
+
+<div class="categories">
+  <h3>Product Categories</h3>
+  <section>
+    <figure>
+      {{ "product_1.png" | asset_url | img_tag: "product_1", "block" }}
+      <figcaption>Personal Care</figcaption>
+    </figure>
+    <figure>
+      {{ "product_2.png" | asset_url | img_tag: "product_2", "block" }}
+      <figcaption>Pet Care</figcaption>
+    </figure>
+    <figure>
+      {{ "product_3.png" | asset_url | img_tag: "product_3", "block" }}
+      <figcaption>Home Care</figcaption>
+    </figure>
+    <figure>
+      {{ "product_4.png" | asset_url | img_tag: "product_4", "block" }}
+      <figcaption>Nutriments</figcaption>
+    </figure>
+  </section>
+</div>
+
+<section class="contact">
+  <div class="sign-up">
+    {{ "newsletter.png" | asset_url | img_tag }}
+    <h1>SignUp for our Newsletter</h1>
+    <form>
+      <input type="text" placeholder="Your email" />
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
+  <div class="sell">
+    <h1>Have a product to sell?</h1>
+    <button type="submit">Sign Up</button>
+  </div>
+</div>
+
+{% section 'latest-additions' %}
