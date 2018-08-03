@@ -131,7 +131,6 @@ section {
 .featured-collection {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 150px;
 
   a {
     color: $color-secondary;
@@ -174,6 +173,10 @@ section {
   }
 }
 
+.manufacturers {
+  margin-top: 150px;
+  text-align: center;
+}
 figure {
   display: flex;
   align-items: center;
