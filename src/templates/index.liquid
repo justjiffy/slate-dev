@@ -94,7 +94,7 @@
  </div>
 
  <div class="rating">
-   <h2>Shopterra Rating System&copy;</h2>
+   <h2>Shopterra Rating System<sup>&copy;</sup></h2>
    {{ "rating.png" | asset_url | img_tag: "Rating System" }}
    <p>
      Shopterra’s simple to use rating system asseses safety and source of ingredients, and the environmental impact of all products we bring to you. Our rating system was developed through extensive industry experience, and in collaboration with the highly respected NSF international.
@@ -102,7 +102,7 @@
    <p>
      {{ "rating_logo_shopterra.png" | asset_url | img_tag: "Shopterra" }}
      rating is verified by
-     {{ "rating_logo_nsf.png" | asset_url | img_tag: "NSF" }}
+     {{ "rating_logo_nsf.png" | asset_url | img_tag: "NSF", 'nsf' }}
    </p>
    <p>
      Our rating system is <span class="large">Independent. Transparent. Verified.</span>
@@ -111,7 +111,7 @@
  </div>
 
 <div class="categories">
-  <h3>Product Categories</h3>
+  <h2>Product Categories</h2>
   <section>
     <figure>
       {{ "product_1.png" | asset_url | img_tag: "product_1", "block" }}
@@ -132,19 +132,22 @@
   </section>
 </div>
 
-<section class="contact">
-  <div class="sign-up">
+<div class="contact">
+  <section class="sign-up">
     {{ "newsletter.png" | asset_url | img_tag }}
     <h1>SignUp for our Newsletter</h1>
     <form>
       <input type="text" placeholder="Your email" />
-      <button type="submit">Sign Up</button>
+      <button class="btn-lg" type="submit">Sign Up</button>
     </form>
-  </div>
-  <div class="sell">
-    <h1>Have a product to sell?</h1>
-    <button type="submit">Sign Up</button>
-  </div>
+  </section>
+  <section class="sell">
+    {{ "plant.png" | asset_url | img_tag: "Sell", 'bg' }}
+    <div>
+      <h1>Have a product to sell?</h1>
+      <button class="btn-lg" type="submit">Sell on Shopterra</button>
+    </div>
+  </section>
 </div>
 
 {% section 'latest-additions' %}

@@ -258,9 +258,53 @@ figure {
   }
 }
 
+.rating {
+  padding-top: 100px;
+  text-align: center;
+
+  h2 {
+    color: #7a7a7a;
+    font-size: 38px;
+    text-align: center;
+    font-weight: 300;
+  }
+
+  sup {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 22px;
+    line-height: 28px;
+    color: #384b51;
+    opacity: 0.7;
+    padding: 0 75px;
+  }
+  .nsf {
+    margin-bottom: -15px;
+    margin-left: 10px;
+  }
+  .large {
+    display: block;
+    font-size: 28px;
+  }
+  .btn-md {
+    margin-top: 0;
+  }
+}
+
 .categories {
+  padding-top: 100px;
+
+  h2 {
+    font-size: 20px;
+    font-weight: 300;
+    color: #909c9f;
+    text-align: center;
+  }
   section {
     justify-content: space-between;
+    padding-top: 0;
   }
 
   figure {
@@ -274,11 +318,88 @@ figure {
     img {
       height: 200px;
     }
+
+    figcaption {
+      font-size: 28px;
+      text-align: center;
+      color: $color-secondary;
+      margin-top: 20px;
+    }
   }
 }
 
 .contact {
+  padding-top: 100px;
+  display: flex;
+  justify-content: space-between;
+
+  .sign-up {
+    flex-direction: column;
+    width: 50%;
+    height: 526px;
+    align-items: center;
+
+    img {
+      margin-top: 22px;
+    }
+    h1{
+      font-size: 46px;
+      font-weight: 300;
+      text-align: center;
+      color: #7a7a7a;
+    }
+
+    form {
+      width: 90%;
+      margin: 0 auto;
+      border: none;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+
+      input {
+        width: 100%;
+        font-size: 20px;
+        padding: 20px;
+        border-radius: 8px;
+      }
+
+      button {
+        border-radius: 8px;
+      }
+    }
+  }
   .sell {
-    background-color: #f3f7f6
+    flex-direction: column;
+    background-color: #f3f7f6;
+    width: 50%;
+    height: 526px;
+    padding-top: 0;
+    position: relative;
+
+    .bg {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      height: inherit;
+      justify-content: space-between;
+      margin: 30px;
+      border: 1px solid $color-secondary;
+    }
+    h1 {
+      font-size: 54px;
+      color: $color-secondary;
+      font-weight: 300;
+    }
+    button {
+      border-radius: 8px;
+      z-index: 1;
+    }
   }
 }
