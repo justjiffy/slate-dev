@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- <meta name="viewport" content="width=device-width,initial-scale=1"> -->
   <meta name="theme-color" content="{{ settings.color_primary }}">
   <link rel="canonical" href="{{ canonical_url }}">
   {% if settings.favicon != blank %}
@@ -81,25 +81,16 @@
 </head>
 
 <body id="{{ page_title | handle }}">
-<div class="Header" class="page-width">
-  {% section 'header' %}
-</div>
-
-  <!-- <main role="main" id="MainContent" class="About About-Buyer">
-    <h1>Natural, sustainable living and peace of mind coming together in harmony</h1>
-    <h3> Shop for truly natural products with the help of easy to understand, transparent information about how safe they are for you and the impact they have on the environment</h3>
-    {% section 'signup' %}
-    {% section 'about' %}
-    <div class="signup">
-      {% section 'signup' %}
-    </div>
-  </main> -->
+  <div class="Header">
+    {% section 'header' %}
+  </div>
 
   <div class="page-width">
     {{ content_for_layout }}
   </div>
 
-  {% section 'footer' %}
-
+  <div class="page-width">
+    {% section 'footer' %}
+  </div>
 </body>
 </html>
