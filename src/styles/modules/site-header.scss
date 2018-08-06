@@ -10,7 +10,7 @@ header {
    margin-right: auto;
  }
  nav a {
-  color: $color-secondary;
+  color: $color-primary;
   text-decoration: none;
   font-size: 18px;
   }
@@ -41,7 +41,7 @@ header {
       list-style: none;
       margin-right: 20px;
       a {
-        color: $color-secondary;
+        color: $color-primary;
         text-decoration: none;
       }
     }
@@ -51,7 +51,7 @@ header {
     border: none !important;
     display: flex;
     align-items: center;
-    color: $color-secondary;
+    color: $color-primary;
 
     span {
       margin-left: 20px;

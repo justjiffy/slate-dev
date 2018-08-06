@@ -12,6 +12,21 @@ img {
   object-fit: cover;
 }
 
+h1 {
+  font-weight: 300;
+  font-size: 46px;
+  color: $color-primary;
+}
+
+p {
+  color: $color-body-text;
+}
+
+h2, h3, a {
+  color: $color-primary;
+  text-decoration: none;
+}
+
 .page-width {
   @include clearfix();
   width: 90%;
@@ -48,28 +63,15 @@ img {
 
     }
     h1 {
-      color: $color-secondary;
+      color: $color-primary;
       font-weight: 300;
       font-size: 52px;
       text-align: center;
       padding: 0 50px;
     }
 
-    form {
-      width: 100%;
-      padding: 0 50px;
-      display: flex;
-    }
-
-    input {
-      width: inherit;
-      font-size: 20px;
-      padding: 20px;
-      border-radius: 4px 0 0 4px;
-    }
-
     .btn {
-      background-color: $color-secondary;
+      background-color: $color-primary;
       color: white;
       width: 65px;
       height: 65px;
@@ -81,7 +83,7 @@ img {
 
 //button, button... who styled the button!?
 .btn-lg {
-  background-color: $color-secondary;
+  background-color: $color-primary;
   width: 100%;
   margin-top: 30px;
   color: white;
@@ -90,7 +92,7 @@ img {
   font-weight: 700;
 }
 .btn-md {
-  background-color: $color-secondary;
+  background-color: $color-primary;
   width: 360px;
   margin: auto;
   margin-top: 30px;
@@ -116,14 +118,14 @@ section {
 
     h2 {
       font-weight: 300;
-      color: $color-secondary;
+      color: $color-primary;
       font-size: 26px;
     }
 
     h3 {
       font-size: 34px;
       font-weight: 300;
-      color: #7a7a7a;
+      color: $color-secondary;
     }
 
     .date {
@@ -139,7 +141,7 @@ section {
 
     a {
       font-weight: bold;
-      color: $color-secondary;
+      color: $color-primary;
       text-decoration: none;
       font-size: 14px;
     }
@@ -154,7 +156,7 @@ figure {
 
   figcaption {
     h3 {
-      color: $color-secondary;
+      color: $color-primary;
       font-size: 32px;
       font-weight: 400;
       margin: 0;
@@ -163,7 +165,7 @@ figure {
       font-weight: 300;
       font-size: 34px;
       line-height: 36px;
-      color: #7a7a7a;
+      color: $color-secondary;
     }
     p {
       font-size: 18px;
@@ -190,7 +192,7 @@ figure {
   justify-content: space-around;
 
   a {
-    color: $color-secondary;
+    color: $color-primary;
     text-decoration: none;
     font-size: 16px;
     display: block;
@@ -205,7 +207,7 @@ figure {
     width: 50%;
 
     p {
-      color: $color-secondary;
+      color: $color-primary;
       font-size: 16px;
       padding: 10px 0 20px 0;
     }
@@ -241,7 +243,7 @@ figure {
     font-weight: 300;
     font-size: 34px;
     line-height: 36px;
-    color: #7a7a7a;
+    color: $color-secondary;
   }
 
   .mf-item {
@@ -273,7 +275,7 @@ figure {
   text-align: center;
 
   h2 {
-    color: #7a7a7a;
+    color: $color-secondary;
     font-size: 38px;
     text-align: center;
     font-weight: 300;
@@ -322,7 +324,7 @@ figure {
     margin: 15px;
     padding: 30px 0;
     flex-direction: column;
-    border: 1px solid $color-secondary;
+    border: 1px solid $color-primary;
     border-radius: 4px;
     width: 260px;
 
@@ -333,7 +335,7 @@ figure {
     figcaption {
       font-size: 28px;
       text-align: center;
-      color: $color-secondary;
+      color: $color-primary;
       margin-top: 20px;
     }
   }
@@ -358,7 +360,7 @@ figure {
       font-size: 46px;
       font-weight: 300;
       text-align: center;
-      color: #7a7a7a;
+      color: $color-secondary;
     }
 
     form {
@@ -402,11 +404,11 @@ figure {
       height: inherit;
       justify-content: space-between;
       margin: 30px;
-      border: 1px solid $color-secondary;
+      border: 1px solid $color-primary;
     }
     h1 {
       font-size: 54px;
-      color: $color-secondary;
+      color: $color-primary;
       font-weight: 300;
     }
     button {

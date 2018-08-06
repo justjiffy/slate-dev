@@ -1,5 +1,5 @@
 {% comment %}
-  When a comment is submitted, the browser is redirected to a page that includes 
+  When a comment is submitted, the browser is redirected to a page that includes
   the new comment id in its URL.
   #comments is a required ID and is used as an anchor link by Shopify.
 {% endcomment %}
@@ -13,21 +13,21 @@
   {% assign number_of_comments = article.comments_count | plus: 1 %}
 {% endif %}
 
-<article role="article" itemscope itemtype="http://schema.org/Article">
+<article role="article" itemscope itemtype="http://schema.org/Article" class="Article">
 
   {% if article.image %}
-    {{ article | img_url: '1024x1024' | img_tag: article.title }}
+    {{ article | img_url: '1024x1024' | img_tag: article.title, "hero" }}
   {% endif %}
 
-  <header role="banner">
+  <div role="banner">
     <h1>{{ article.title }}</h1>
     {% capture date %}{{ article.published_at | time_tag: format: 'month_day_year' }}{% endcapture %}
     <p>{{ 'blogs.article.author_on_date_html' | t: author: article.author, date: date }}</p>
-  </header>
-
-  <div class="rte" itemprop="articleBody">
-    {{ article.content }}
   </div>
+
+  <p class="rte" itemprop="articleBody">
+    {{ article.content }}
+  </p>
 
   {% if article.tags.size > 0 %}
     <ul>
@@ -44,7 +44,7 @@
   {% endif %}
 
   {% if blog.comments_enabled? %}
-    <h3>{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+    <!-- <h3>{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3> -->
 
     {% paginate article.comments by 5 %}
 
@@ -135,7 +135,7 @@
       </textarea>
 
       {% if blog.moderated? %}
-        <p>{{ 'blogs.comments.moderated' | t }}</p>
+        <p class="note">{{ 'blogs.comments.moderated' | t }}</p>
       {% endif %}
 
       <input type="submit" class="btn" value="{{ 'blogs.comments.post' | t }}">

@@ -1,13 +1,57 @@
 /*================ Site Blog ================*/
-.list {
-  background: blue;
-
-  &:nth-child(even) {
-    background: red !important;
+.Blog {
+  a {
+    display: inline-block;
+    width: 40%;
   }
 
-  .feature {
-    width: 30%;
-    height: 250px;
+  p {
+    line-height: 1.6;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .btn {
+    background-color: $color-primary;
+    color: white;
+    border: none;
+
+    &:hover {
+      span {
+        transform: translateX(10px) scale(0.5) rotate(-90deg);
+      }
+    }
+
+    span {
+      position: absolute;
+      transition: all 0.25s;
+      transform: scale(0.5) rotate(-90deg);
+    }
+  }
+  .list {
+    &::after {
+      content: "";
+      clear: both;
+      display: table;
+      margin-bottom: 100px;
+    }
+
+    &:nth-child(even) .feature {
+      float: right;
+      margin-left: 50px;
+
+    }
+
+    &:nth-child(odd) .feature {
+      float: left;
+      margin-right: 50px;
+    }
+
+    .feature {
+      display: inline-block;
+      width: 30%;
+    }
   }
 }

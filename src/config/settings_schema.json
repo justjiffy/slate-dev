@@ -47,21 +47,21 @@
         "type": "color",
         "id": "color_primary",
         "label": "Primary color",
-        "default": "#FF0",
+        "default": "#35a6b0",
         "info": "Used for text links, and primary buttons"
       },
       {
         "type": "color",
         "id": "color_secondary",
         "label": "Secondary color",
-        "default": "#35a6b0",
+        "default": "#7a7a7a",
         "info": "Used for text links, and alternative buttons"
       },
       {
         "type": "color",
         "id": "color_body_text",
         "label": "Text color",
-        "default": "#FF0",
+        "default": "#5e6568",
         "info": "Color used for content and paragraph text"
       }
     ]
@@ -94,8 +94,7 @@
       {
         "type": "checkbox",
         "id": "share_pinterest",
-        "label": "Pin on Pinterest",
-        "default": true
+        "label": "Pin on Pinterest"
       },
       {
         "type": "header",

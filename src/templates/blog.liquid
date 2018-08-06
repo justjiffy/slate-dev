@@ -37,8 +37,8 @@
   <div class="list">
 
     {% if article.image %}
-    <a href="{{ article.url }}">
-      {{ article | img_url: '1024x1024' | img_tag: article.title, 'feature' }}
+    <a href="{{ article.url }}" class="feature">
+      {{ article | img_url: '1024x1024' | img_tag: article.title }}
     </a>
     {% endif %}
 
@@ -53,25 +53,21 @@
       </p>
 
       <div class="rte">
-        {% if article.excerpt.size > 0 %}
-          {{ article.excerpt }}
-        {% else %}
           <p>
             {{ article.content | strip_html | truncatewords: 100 }}
           </p>
-        {% endif %}
       </div>
 
 
     {% if blog.comments_enabled? or article.tags.size > 0 %}
       <ul>
-        {% if blog.comments_enabled? %}
+        <!-- {% if blog.comments_enabled? %}
           <li>
             <a href="{{ article.url }}#comments">
               {{ 'blogs.comments.with_count' | t: count: article.comments_count }}
             </a>
           </li>
-        {% endif %}
+        {% endif %} -->
 
         {% if article.tags.size > 0 %}
           {% for tag in article.tags %}
@@ -85,7 +81,7 @@
     {% endif %}
 
     <p>
-      <a href="{{ article.url }}">{{ 'blogs.article.read_more' | t }} &rarr;</a>
+      <a class="btn" href="{{ article.url }}">{{ 'blogs.article.read_more' | t }} <span>{% include 'icon-arrow-down' %}</span></a>
     </p>
 
   </div>

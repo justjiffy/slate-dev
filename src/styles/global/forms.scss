@@ -32,7 +32,7 @@ select {
     color: $color-border;
 }
 
-input:active, input:focus {
+input:active, input:focus, textarea:active, textarea:focus {
   outline: none;
   -webkit-appearance: none !important;
   -moz-appearance: none !important;
@@ -40,13 +40,14 @@ input:active, input:focus {
   background: white !important;
 }
 
-input:-webkit-autofill {
+input:-webkit-autofill, textarea:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
 
 ::-ms-input-placeholder { /* Microsoft Edge */
     color: $color-border;
 }
+
 textarea {
   min-height: 100px;
 }
