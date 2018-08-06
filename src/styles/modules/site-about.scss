@@ -1,0 +1,391 @@
+//SECTION 1 - VARIABLES
+$primaryText: #454545;
+$secondaryText: #616575;
+$lightGrayText: #747474;
+$formPlaceholder: #A4A4A4;
+$formBackground: #D1E5E7;
+$formBorder: #979797;
+
+$iconOff: #C1C1C1;
+$borderColor: #CCCCCC;
+$lightGrayBg: #F1F1F1;
+$teal: #3AAAB2;
+$darkPink: #C62786;
+$lightGray: #C4C4C4;
+
+$padding: 10px;
+$aboutIcon: 53px;
+
+@mixin desktop() {
+  @media only screen and (min-width: 408px) { @content }
+};
+
+@mixin xl() {
+  @media only screen and (min-width: 1136px) { @content }
+};
+
+//SECTION 2 - APP
+.App {
+  background-repeat: no-repeat;
+  background-size: 300%;
+  background-position-x: 50%;
+  background-position-y: 70px;
+  text-align: center;
+  @include desktop() {
+    background-size: 125%;
+    background-position-y: 61px;
+  }
+
+  input {
+    margin-right: 0;
+  }
+  main {
+    display: block;
+
+    .btn {
+      width: auto;
+      height: auto;
+    }
+
+    div {
+      max-width: none;
+    }
+  }
+
+  section {
+    display: block !important;
+    background: white;
+    border: 1px solid $borderColor;
+    margin: $padding;
+    padding: calc(#{$padding}*2);
+    @include desktop() {
+      max-width: 715px;
+      margin: $padding auto;
+    }
+
+    div {
+      padding: 0;
+    }
+  }
+}
+
+h1 {
+  color: $primaryText;
+}
+
+h2 {
+  color: $primaryText;
+  font-weight: 400;
+  font-size: 18px;
+}
+h3 {
+  font-weight: 400;
+  font-size: 16px;
+}
+hr {
+  margin: calc(#{$padding} * 4) 0;
+  border-color: white;
+}
+
+.Footer {
+  height: 120px;
+  background-color: $lightGrayBg;
+  padding: calc(#{$padding} * 1.5);
+  @include desktop() {
+    padding: $padding 20%;
+  }
+  div {
+    float: left;
+    text-align: left;
+    font-size: 12px;
+
+    p, a {
+      color: $lightGrayText;
+      text-decoration: none;
+    }
+  }
+  .logo {
+    width: 80px;
+  }
+  .social {
+    float: right;
+    width: 27px;
+    margin-left: $padding;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  * {
+    font-size: 16px;
+    padding: $padding;
+    margin: calc(#{$padding} / 2) 0;
+  }
+  @include desktop() {
+    flex-direction: row;
+  }
+}
+fieldset {
+  border: none;
+  margin: 0 auto;
+}
+input, textarea, .file {
+  width: 100%;
+  border-radius: 36px;
+  text-align: center;
+  border: 1px solid $formBorder;
+  color: $formPlaceholder;
+  @include desktop() {
+    width: 60%;
+    margin: calc(#{$padding} / 2 ) $padding;
+  }
+  &:focus {
+    outline: none;
+    border: 1px solid $teal;
+    background: white;
+  }
+}
+
+//SECTION 3 - ABOUT
+.About {
+  background-image: url({{ "background_1_mobile.png" | asset_url }});
+  background-repeat: no-repeat;
+  background-size: 110%;
+  margin-bottom: calc(#{$padding}*2) !important;
+  @include desktop() {
+    background-image: url({{ "background_1_desktop.png" | asset_url }});
+    padding-top: calc(#{$padding} * 4) !important;
+    background-size: 165%;
+  }
+  @include xl() {
+    background-size: 125%;
+  }
+
+  .margin {
+    @include desktop() {
+      margin-top: calc(#{$padding} * 4) !important;
+    }
+  }
+
+  h1 {
+    font-size: 46px;
+    line-height: 52px;
+    margin: 0 150px;
+  }
+  h2 {
+    color: $primaryText;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 400;
+    @include desktop() {
+      max-width: 515px;
+      margin: auto;
+    }
+  }
+  h3 {
+    font-size: 18px;
+    line-height: 26px;
+    color: $secondaryText;
+    padding: calc(#{$padding} * 2);
+    @include desktop() {
+      max-width: 515px;
+      margin: auto;
+    }
+  }
+  p {
+    color: $lightGrayText;
+    padding-top: $padding;
+  }
+
+  .icons { display: flex; flex-direction: row; flex-wrap: wrap;
+    div { width: 50%; padding: $padding;
+      @include desktop() { width: 25% }
+    }
+    img { display: block; margin: 10px auto; width: 53px; }
+    }
+
+  .signup { padding: 40px 20px; }
+}
+
+.Rating {
+  margin-top: calc(#{$padding} * 5);
+
+  img {
+    width: 50%;
+    margin-top: 50px;
+  }
+  p {
+    font-size: 20px;
+  }
+  ul {
+    padding: calc(#{$padding} * 3) 0 0 calc(#{$padding} *2);
+    font-size: 14px;
+    margin: 0;
+  }
+  li {
+    list-style-image: url({{ "icon_check.svg" | asset_url }});
+    list-style-position: inside;
+    text-indent: -22px;
+    padding-bottom: $padding;
+    color: $secondaryText;
+    text-align: left;
+  }
+  @include desktop() {
+    .good-container {
+      display: flex;
+    }
+    .margin-fix {
+      border-right: none;
+    }
+  }
+}
+
+.GoodFor {
+  margin: calc(#{$padding}*4) 0;
+  padding: 0 20px !important;
+
+  &:nth-child(2) {
+    border-left: none;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 22px;
+    margin-top: $padding;
+  }
+  p {
+    font-size: 15px;
+    line-height: 22px;
+    margin-top: $padding;
+    @include desktop() {
+      text-align: left;
+    }
+  }
+  .rating {
+    width: 64px;
+  }
+  .pink { color: $darkPink; fill: $darkPink; }
+  .green { color: $teal; fill: $teal; }
+
+  @include desktop() {
+    border: 1px solid $borderColor;
+    width: 50%;
+    padding: calc(#{$padding}*4);
+  }
+}
+
+.Example {
+  p {
+    margin: $padding;
+    color: #959595;
+    font-size: 15px;
+    line-height: 24px;
+  }
+  img {
+    width: 100%;
+    @include desktop() {
+      margin-top: calc(#{$padding} *2);
+    }
+  }
+  .heading {
+
+  }
+  .content-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @include desktop() {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+  .content {
+    text-align: left;
+
+    @include desktop() {
+      width: 50%;
+      margin: calc(#{$padding} * 2);
+    }
+    .nsf {
+      width: 75px;
+
+    }
+  }
+}
+
+.Why {
+  background-image: url({{ "background_2.jpg" | asset_url }});
+  background-position: 50% 0%;
+  background-size: 350%;
+  background-repeat: no-repeat;
+  padding: calc(#{$padding} * 3);
+
+  @include desktop() {
+    background-size: cover;
+    padding-bottom: calc(#{$padding} * 8);
+    margin-bottom: calc(#{$padding} * 4);
+  }
+
+  h1 {
+    font-weight: 400;
+    color: $primaryText;
+    font-size: 26px;
+    padding-bottom: 0px;
+  }
+  h3 {
+    font-weight: 400;
+    padding-top: 10px;
+    padding-bottom: 40px;
+  }
+  p {
+    font-size: 16px;
+    background-color: white;
+    padding: calc(#{$padding} * 2);
+    line-height: 24px;
+    @include desktop() {
+      max-width: 715px;
+      margin: 0 auto;
+      padding: calc(#{$padding} * 3) calc(#{$padding} * 6);
+    }
+  }
+}
+
+.Categories {
+  padding: 0 calc(#{$padding} * 2);
+
+  h1 {
+    font-weight: 400;
+    color: $primaryText;
+    font-size: 26px;
+    padding: 0 calc(#{$padding} * 2);
+  }
+  @include desktop() {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: calc(#{$padding} * 3);
+
+    div {
+      position: relative;
+      width: 50%;
+      padding: 5px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    p {
+      color: $secondaryText;
+      position: absolute;
+      top: $padding;
+      width: 100%;
+    }
+  }
+}

@@ -26,6 +26,10 @@ header {
     font-weight: 400;
     background-color: white;
   }
+  .icon {
+    width: 25px;
+    height: 25px;
+  }
 }
 
 .subNav {
@@ -71,6 +75,7 @@ header {
     height: 52px;
     justify-content: center;
     display: flex;
+    margin-bottom: 0;
 
     input {
       border: none;

@@ -79,6 +79,7 @@ h2, h3, a {
       font-size: 20px;
       padding: 20px;
       border-radius: 4px 0 0 4px;
+      margin-right: 0;
     }
 
     .btn {
@@ -410,6 +411,7 @@ figure {
       height: inherit;
       justify-content: space-between;
       margin: 30px;
+      margin-bottom: 20px;
       border: 1px solid $color-primary;
     }
     h1 {
