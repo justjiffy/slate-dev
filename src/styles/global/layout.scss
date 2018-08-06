@@ -26,7 +26,6 @@ h2, h3, a {
   color: $color-primary;
   text-decoration: none;
 }
-
 .page-width {
   @include clearfix();
   width: 90%;
@@ -39,7 +38,6 @@ h2, h3, a {
   display: none !important;
 }
 
-//general styles for all sections
   main {
     display: flex;
     justify-content: space-between;
@@ -70,8 +68,20 @@ h2, h3, a {
       padding: 0 50px;
     }
 
+    form {
+      width: 100%;
+      padding: 0 50px;
+      display: flex;
+    }
+
+    input {
+      width: inherit;
+      font-size: 20px;
+      padding: 20px;
+      border-radius: 4px 0 0 4px;
+    }
+
     .btn {
-      background-color: $color-primary;
       color: white;
       width: 65px;
       height: 65px;
@@ -83,7 +93,7 @@ h2, h3, a {
 
 //button, button... who styled the button!?
 .btn-lg {
-  background-color: $color-primary;
+  border: none;
   width: 100%;
   margin-top: 30px;
   color: white;
@@ -92,14 +102,10 @@ h2, h3, a {
   font-weight: 700;
 }
 .btn-md {
-  background-color: $color-primary;
   width: 360px;
   margin: auto;
   margin-top: 30px;
-  color: white;
-  font-size: 22px;
   height: 70px;
-  font-weight: 700;
 }
 
 section {

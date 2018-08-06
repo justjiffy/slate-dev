@@ -2,7 +2,6 @@
 header {
   display: flex;
   justify-content: space-between;
-
  h1 {
    margin-top: 0;
    margin-bottom: 0;
@@ -21,6 +20,11 @@ header {
   nav ul li {
     list-style: none;
     margin-left: 35px;
+  }
+  .btn {
+    font-size: 18px;
+    font-weight: 400;
+    background-color: white;
   }
 }
 
@@ -49,9 +53,12 @@ header {
 
   .btn {
     border: none !important;
+    font-size: 18px;
+    font-weight: 400;
     display: flex;
     align-items: center;
     color: $color-primary;
+    background-color: white;
 
     span {
       margin-left: 20px;
