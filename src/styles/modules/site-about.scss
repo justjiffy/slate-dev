@@ -160,7 +160,7 @@ input, textarea, .file {
     background-size: 165%;
   }
   @include xl() {
-    background-size: 125%;
+    background-size: 135%;
   }
 
   .margin {
@@ -170,9 +170,8 @@ input, textarea, .file {
   }
 
   h1 {
-    font-size: 46px;
-    line-height: 52px;
-    margin: 0 150px;
+    font-size: 52px;
+    margin: 0 220px;
   }
   h2 {
     color: $primaryText;
@@ -206,18 +205,33 @@ input, textarea, .file {
     img { display: block; margin: 10px auto; width: 53px; }
     }
 
-  .signup { padding: 40px 20px; }
+  .signup { padding: 40px 20px;
+
+  }
 }
 
 .Rating {
-  margin-top: calc(#{$padding} * 5);
+  margin-top: calc(#{$padding} * 3);
 
   img {
-    width: 50%;
+    width: 60%;
     margin-top: 50px;
   }
+  h2 {
+    color: #7a7a7a;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 300;
+    margin-top: 20px;
+    max-width: none;
+  }
   p {
-    font-size: 20px;
+    font-size: 30px;
+  }
+  .desktop {
+    font-size: 16px;
+    padding: 0 120px;
+    line-height: 24px;
   }
   ul {
     padding: calc(#{$padding} * 3) 0 0 calc(#{$padding} *2);
@@ -231,6 +245,23 @@ input, textarea, .file {
     padding-bottom: $padding;
     color: $secondaryText;
     text-align: left;
+  }
+
+  .seller-icons {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    div {
+      border: none;
+      padding: 10px;
+    }
+    img {
+      width: 50px;
+      margin-top: 15px;
+    }
+    p {
+      font-size: 18px;
+    }
   }
   @include desktop() {
     .good-container {
@@ -370,7 +401,8 @@ input, textarea, .file {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: calc(#{$padding} * 3);
+    width: 50%;
+    margin: calc(#{$padding} * 3) auto;
 
     div {
       position: relative;
