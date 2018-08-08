@@ -85,6 +85,7 @@ h3 {
 hr {
   margin: calc(#{$padding} * 4) 0;
   border-color: white;
+  opacity: 0;
 }
 
 .Footer {
@@ -117,7 +118,7 @@ hr {
 form {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin: 15px 0;
   * {
     font-size: 16px;
     padding: $padding;
@@ -219,7 +220,7 @@ input, textarea, .file {
   }
   h2 {
     color: #7a7a7a;
-    font-size: 40px;
+    font-size: 36px;
     text-align: center;
     font-weight: 300;
     margin-top: 20px;
@@ -251,6 +252,7 @@ input, textarea, .file {
     display: flex;
     justify-content: center;
     align-items: baseline;
+    margin-bottom: 50px;
     div {
       border: none;
       padding: 10px;
@@ -279,6 +281,10 @@ input, textarea, .file {
 
   &:nth-child(2) {
     border-left: none;
+  }
+
+  img {
+    width: 25%;
   }
 
   h2 {
@@ -327,6 +333,7 @@ input, textarea, .file {
     display: flex;
     align-items: center;
     flex-direction: column;
+    border: none;
 
     @include desktop() {
       flex-direction: row;
@@ -335,6 +342,7 @@ input, textarea, .file {
   }
   .content {
     text-align: left;
+    border: none;
 
     @include desktop() {
       width: 50%;
@@ -384,6 +392,23 @@ input, textarea, .file {
   }
 }
 
+.divider {
+  display: flex;
+  justify-content: center;
+
+  img {
+    width: 50px;
+    height: 50px;
+    object-fit: scale-down;
+    margin: 15px;
+  }
+
+  hr {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
 .Categories {
   padding: 0 calc(#{$padding} * 2);
 
@@ -420,4 +445,11 @@ input, textarea, .file {
       width: 100%;
     }
   }
+
+
+}
+
+.Link {
+  margin-top: -10px;
+  margin-bottom: 50px;
 }
