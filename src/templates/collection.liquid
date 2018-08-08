@@ -1,11 +1,15 @@
 {% paginate collection.products by 12 %}
-  <header role="banner">
-    <h1>{{ collection.title }}</h1>
-    {% if collection.description != blank %}
-      <div class="rte">
-        {{ collection.description }}
-      </div>
-    {% endif %}
+  <header role="banner" class="collection-details">
+    {% if collection.image %}{{ collection.image | img_url: 'medium' | img_tag: collection.title, "vendor-logo" }}{% endif %}
+    <div>
+
+      <h1>{{ collection.title }}</h1>
+      {% if collection.description != blank %}
+        <div class="rte">
+          {{ collection.description }}
+        </div>
+      {% endif %}
+    </div>
 
     {% if collection.all_tags.size > 0 %}
       <ul>

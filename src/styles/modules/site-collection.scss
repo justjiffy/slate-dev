@@ -1,0 +1,23 @@
+/*================ Site Collection ================*/
+.collection-details {
+  margin-top: 50px;
+
+  h1 {
+    color: $color-primary;
+    font-size: 22px;
+    font-weight: 400;
+  }
+
+  .rte{
+    color: $color-primary;
+
+    img {
+      margin-right: 0;
+      transform: translateY(5px);
+    }
+  }
+
+  .vendor-logo {
+    margin-right: 50px;
+  }
+}
