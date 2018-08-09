@@ -81,15 +81,11 @@
 </head>
 
 <body id="{{ page_title | handle }}">
-  <div class="Header">
-    {% section 'header' %}
-  </div>
-
   <div class="page-width">
     {{ content_for_layout }}
   </div>
 
-  <div class="page-width">
+  <div>
     {% section 'footer' %}
   </div>
 </body>

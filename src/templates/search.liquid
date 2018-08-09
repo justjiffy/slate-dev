@@ -1,18 +1,26 @@
+<div class="Header">
+  {% section 'header' %}
+</div>
+
 {% paginate search.results by 10 %}
 
-  <h1>
+  <div>
     {% if search.performed %}
       {% if search.results_count == 0 %}
-        {{ 'general.search.no_results_html' | t: terms: search.terms }}
+      <div class="prelaunch">
+        <h1 style="margin-top: 80px;">Thanks for your interest!</h1>
+        <p>We are working away to bring you top quality natural and eco-friendly products from passionate artisans who also care deeply about your well-being and keeping our planet clean. Please sign up <a href="/">here</a> to be notified of our launch.</p>
+      </div>
+        <!-- {{ 'general.search.no_results_html' | t: terms: search.terms }} -->
       {% else %}
         {{ 'general.search.results_for_html' | t: terms: search.terms }}
       {% endif %}
     {% else %}
       {{ 'general.search.title' | t }}
     {% endif %}
-  </h1>
+  </div>
 
-  <form action="/search" method="get" role="search">
+  <!-- <form action="/search" method="get" role="search">
     <label for="Search" class="label-hidden">
       {{ 'general.search.placeholder' | t }}
     </label>
@@ -25,7 +33,7 @@
       {% include 'icon-search' %}
       <span class="icon-fallback-text">{{ 'general.search.submit' | t }}</span>
     </button>
-  </form>
+  </form> -->
 
 
 {% if search.performed %}

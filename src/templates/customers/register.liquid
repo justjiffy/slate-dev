@@ -1,4 +1,11 @@
-<h1>{{ 'customer.register.title' | t }}</h1>
+<div class="Header">
+  {% section 'header' %}
+</div>
+<div class="prelaunch">
+  <h1 style="margin-top: 80px;">Thanks for your interest!</h1>
+  <p>We are working away to bring you top quality natural and eco-friendly products from passionate artisans who also care deeply about your well-being and keeping our planet clean. Please sign up <a href="/">here</a> to be notified of our launch.</p>
+</div>
+<!-- <h1>{{ 'customer.register.title' | t }}</h1>
 
 {% form 'create_customer' %}
   {{ form.errors | default_errors }}
@@ -48,4 +55,4 @@
     <input type="submit" value="{{ 'customer.register.submit' | t }}" class="btn">
   </p>
   <a href="{{ shop.url }}">{{ 'customer.register.cancel' | t }}</a>
-{% endform %}
+{% endform %} -->

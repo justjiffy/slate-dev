@@ -1,17 +1,20 @@
+<div class="Header">
+  {% section 'header' %}
+</div>
+
 {% paginate collection.products by 12 %}
   <header role="banner" class="collection-details">
     {% if collection.image %}{{ collection.image | img_url: 'medium' | img_tag: collection.title, "vendor-logo" }}{% endif %}
-    <div>
 
-      <h1>{{ collection.title }}</h1>
-      {% if collection.description != blank %}
+    {% if collection.all_tags.size > 0 %}
+      <div>
+        <h1>{{ collection.title }}</h1>
+        {% if collection.description != blank %}
         <div class="rte">
           {{ collection.description }}
         </div>
-      {% endif %}
-    </div>
-
-    {% if collection.all_tags.size > 0 %}
+        {% endif %}
+      </div>
       <ul>
         {% for tag in collection.all_tags %}
           {% if current_tags contains tag %}
@@ -90,7 +93,19 @@
           </p>
         {% endfor %}
       {% else %}
-        <p>{{ 'collections.general.no_matches' | t }}</p>
+      <div class="prelaunch">
+
+        <h1>Thanks for your interest!</h1>
+        <p>We are working away to bring you top quality natural and eco-friendly {{ collection.title | downcase }} from passionate artisans who also care deeply about your well-being and keeping our planet clean. Please sign up <a href="/">here</a> to be notified of our launch.</p>
+        <p>
+          Here are some examples of the type of products you will see on Shopterra:
+        </p>
+        <div class="sub-categories">
+          {{ collection.description }}
+        </div>
+      </div>
+
+
       {% endif %}
 
     {% endfor %}

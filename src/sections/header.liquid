@@ -1,11 +1,11 @@
-<div data-section-id="{{ section.id }}" data-section-type="header-section" class="page-width">
+<div data-section-id="{{ section.id }}" data-section-type="header-section">
   <header role="banner">
     {% if template.name == 'index' %}
       <h1 itemscope itemtype="http://schema.org/Organization">
     {% else %}
       <div class="h1" itemscope itemtype="http://schema.org/Organization">
     {% endif %}
-        <a href="/">
+        <a href="/pages/store">
             <img src="{{ 'header_logo.png' | asset_url }}" alt="{{ section.settings.logo.alt | default: shop.name }}">
         </a>
     {% if template.name == 'index' %}
