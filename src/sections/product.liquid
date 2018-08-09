@@ -9,7 +9,133 @@
   <meta itemprop="image" content="{{ featured_image | img_url: '600x600' }}">
   <meta itemprop="description" content="{{ product.description | strip_html | escape }}">
 
-  {% if featured_image != blank %}
+  <div class="prelaunch">
+    <h1>Thanks for your interest!</h1>
+    <p>We are working away to bring you top quality natural and eco-friendly products from passionate artisans who also care deeply about your well-being and keeping our planet clean. Please sign up <a href="/">here</a> to be notified of our launch.</p>
+    <p>
+      Here are some examples of the type of products you will see on Shopterra:
+    </p>
+    <div class="product-list">
+      <ul style="color: #5e6568;">
+        <li><strong style="color: #35a6b0;">Home Care</strong></li>
+        <li>Airfreshners</li>
+        <li>Blush On</li>
+        <li>Bug Repellant</li>
+        <li>Candles</li>
+        <li>Carpet Care</li>
+        <li>Carpet Deodorizers</li>
+        <li>Dinfectants</li>
+        <li>Dish Cleaner</li>
+        <li>Drain Openers</li>
+        <li>Fabric Softner</li>
+        <li>Face Wash</li>
+        <li>First Aid</li>
+        <li>Floor Cleaners</li>
+        <li>Gardening Supplies</li>
+        <li>Household Cleaner</li>
+        <li>Laundry Detergent</li>
+        <li>Light Bulbs</li>
+        <li>Lint Remover</li>
+        <li>Make Up Remover</li>
+        <li>Mounthwash</li>
+        <li>Oven Cleaner</li>
+        <li>Stain Remover</li>
+        <li>Washing Machine Cleaners</li>
+        <li>Wood Care</li>
+        <li>Pest Control</li>
+      </ul>
+      <ul style="color: #5e6568;">
+        <li><strong style="color: #35a6b0;">Personal Care</strong></li>
+        <li>Anti-aging</li>
+        <li>Antiperspirants</li>
+        <li>Aroma Therapy</li>
+        <li>Baby Balm</li>
+        <li>Baby Bath </li>
+        <li>Baby Cream</li>
+        <li>Baby Diaper Rash Cream</li>
+        <li>Baby Wipe</li>
+        <li>Bath Salt</li>
+        <li>Beauty Aids</li>
+        <li>Body Wash</li>
+        <li>Breath Fresheners</li>
+        <li>Bug Repellant</li>
+        <li>Cleansers</li>
+        <li>Conditioner</li>
+        <li>Detangle</li>
+        <li>Baby Diaper</li>
+        <li>Adult Diaper</li>
+        <li>Elixirs</li>
+        <li>Essential Oil</li>
+        <li>Exfoliators</li>
+        <li>Eye Care</li>
+        <li>Foot Care</li>
+        <li>Fragrances</li>
+        <li>Hair Care</li>
+        <li>Hair Color</li>
+        <li>Hair Removal</li>
+        <li>Hand Cream</li>
+        <li>Hand Lotion</li>
+        <li>Hand Sanitizers</li>
+        <li>Hand Soap</li>
+        <li>Lice Treatment</li>
+        <li>Lip Care</li>
+        <li>Lip Color</li>
+        <li>Lotion</li>
+        <li>Mashcara</li>
+        <li>Masks</li>
+        <li>Massage Creams</li>
+        <li>Moisturizer</li>
+        <li>Mounthwash</li>
+        <li>Nail Care</li>
+        <li>Nail Polish</li>
+        <li>Oral Care</li>
+        <li>Saving Cream</li>
+        <li>Saving Lotion</li>
+        <li>Serums</li>
+        <li>Shampoo</li>
+        <li>Shower Gel</li>
+        <li>Soap</li>
+        <li>Spa </li>
+        <li>Sunscreen</li>
+        <li>Toners</li>
+        <li>Tooth Brush</li>
+        <li>Tooth Paste</li>
+        <li>Wipes</li>
+        <li>Blush On</li>
+        <li>Make Up Remover</li>
+        <li>Face Wash</li>
+      </ul>
+      <ul style="color: #5e6568;">
+        <li><strong style="color: #35a6b0;">Pet Care</strong></li>
+        <li>Pet Bath Soap</li>
+        <li>Pet Cleansers</li>
+        <li>Pet Conditioner</li>
+        <li>Pet Dental Care</li>
+        <li>Pet Deodorizer</li>
+        <li>Pet Ear Care</li>
+        <li>Pet Odor Control</li>
+        <li>Pet Wipes</li>
+        <li>Pet Shampoo</li>
+        <li>Pet Skin Care</li>
+        <li>Tick Treatment</li>
+        <li>Pet Toothpaste</li>
+      </ul>
+      <ul style="color: #5e6568;">
+        <li><strong style="color: #35a6b0;">Nutriments</strong></li>
+        <li>Botanical extracts</li>
+        <li>Culinary herbs</li>
+        <li>Electrolytes</li>
+        <li>Energy Infusion</li>
+        <li>Extracts</li>
+        <li>Flower essences/remedies</li>
+        <li>Immune system Enhancer</li>
+        <li>Tea</li>
+        <li>Tonics</li>
+      </ul>
+    </div>
+
+
+  <!-- {% if featured_image != blank %}
     <img src="{{ featured_image | img_url: '480x480' }}" alt="{{ featured_image.alt | escape }}" data-product-featured-image>
   {% endif %}
 
@@ -26,9 +152,9 @@
   {% endif %}
 
   <h1>{{ product.title }}</h1>
-  <p>{{ product.vendor }}</p>
+  <p>{{ product.vendor }}</p> -->
 
-  <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+  <!-- <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
     <meta itemprop="priceCurrency" content="{{ shop.currency }}">
     <meta itemprop="price" content="{{ current_variant.price | divided_by: 100.00 }}">
     <link itemprop="availability" href="http://schema.org/{% if current_variant.available %}InStock{% else %}OutOfStock{% endif %}">
@@ -101,22 +227,16 @@
       </button>
     </form>
 
-  </div>
-
-  <div class="rte">
-    {{ product.description }}
-  </div>
-
-  {% if section.settings.show_share_buttons %}
-    {% include 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product %}
-  {% endif %}
-
+  </div> -->
   {% unless product == empty %}
     <script type="application/json" data-product-json>
       {{ product | json }}
     </script>
   {% endunless %}
 </div>
+
+</div>
+
 
 {% schema %}
   {

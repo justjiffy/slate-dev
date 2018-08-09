@@ -111,10 +111,15 @@ h2, h3, a {
   height: 70px;
 }
 
+.trio {
+  h2 {
+    font-weight: 400;
+  }
+}
+
 section {
   padding-top: 40px;
   display: flex;
-
 
   div {
     text-align: center;
@@ -424,6 +429,20 @@ figure {
     button {
       border-radius: 8px;
       z-index: 1;
+    }
+  }
+}
+
+.product-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  ul {
+    li:first-child {
+      list-style: none;
+      margin-left: -30px;
+      margin-bottom: 15px;
     }
   }
 }

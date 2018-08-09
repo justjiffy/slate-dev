@@ -242,16 +242,19 @@ input, textarea, .file {
     padding: calc(#{$padding} * 3) 0 0 calc(#{$padding} *2);
     font-size: 14px;
     margin: 0;
+    list-style: none;
   }
   li {
-    list-style-image: url({{ "icon_check.svg" | asset_url }});
+
     list-style-position: inside;
     text-indent: -22px;
     padding-bottom: $padding;
     color: $secondaryText;
     text-align: left;
   }
-
+  .pink {
+    color: pink;
+  }
   .seller-icons {
     display: flex;
     justify-content: center;
@@ -278,10 +281,19 @@ input, textarea, .file {
     }
   }
 }
-
+.KindTo {
+  ul li {
+    list-style-image: url({{ "vectorpaint2.svg" | asset_url }}) !important;
+  }
+}
 .GoodFor {
   margin: calc(#{$padding}*4) 0;
   padding: 0 20px !important;
+
+
+  ul li {
+    list-style-image: url({{ "vectorpaint.svg" | asset_url }});
+  }
 
   &:nth-child(2) {
     border-left: none;
