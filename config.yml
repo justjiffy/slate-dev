@@ -15,14 +15,14 @@
 
 production:
   password: c4f81e1d8fe1f536c25cfd6ddbf93980
-  theme_id: "17353441324"
-  store: shopterra-inc.myshopify.com
-  ignore_files:
-    #- settings_data.json # Uncomment this line to avoid resetting theme settings
-
-development:
-  password: c4f81e1d8fe1f536c25cfd6ddbf93980
   theme_id: "17044897836"
   store: shopterra-inc.myshopify.com
   ignore_files:
     #- settings_data.json # Uncomment this lsine to avoid resetting theme settings
+
+development:
+  password: c4f81e1d8fe1f536c25cfd6ddbf93980
+  theme_id: "17353441324"
+  store: shopterra-inc.myshopify.com
+  ignore_files:
+    #- settings_data.json # Uncomment this line to avoid resetting theme settings

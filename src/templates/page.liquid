@@ -1,5 +1,13 @@
 <!-- /pages/store -->
 
+<div class="welcome" id="welcome">
+  <h1>Thank you for test driving Shopterra</h1>
+  <p>This website is a demo, so some features (such as search) are disabled. Sign up <a href="/">here</a> to be notified when we launch.</p>
+  <div class="close" id="close">
+    {% include 'icon-close' %}
+  </div>
+</div>
+
 <div>
   {% section 'header' %}
 </div>
@@ -48,7 +56,7 @@
 
   <section>
     <div>
-      <h3>A message form our experts about how everyday chemicals can be toxic and why natural products matter.</h3>
+      <h3>A message from our experts about how everyday chemicals can be toxic and why natural products matter.</h3>
       <span class="date">Date: 07/27/18</span>
     </div>
     {{ 'placeholder_video.png' | asset_url | img_tag: 'Video' }}
@@ -158,3 +166,30 @@
   {% section 'latest-additions' %}
 
   <br /><br /><br />
+
+  <script>
+    var welcome = document.getElementById('welcome');
+    var close = document.getElementById('close');
+    var header = document.getElementsByTagName('header')[0];
+    var show = true;
+
+    var slideOut = function() { welcome.classList.remove('scroll') }
+
+    var onLoad = function() {
+      var slideIn = welcome.classList.add('scroll');
+      setTimeout(slideOut, 6000);
+    }
+
+    var onScroll = function() {
+      if (show == true) {
+        var slideIn = welcome.classList.add('scroll');
+        setTimeout(slideOut, 6000);
+      }
+      show = false;
+    }
+
+    document.addEventListener("DOMContentLoaded", onLoad);
+    window.addEventListener("scroll", onScroll);
+    close.addEventListener('click', slideOut);
+
+  </script>

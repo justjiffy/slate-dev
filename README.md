@@ -8,7 +8,7 @@ This project was bootstrapped with [Slate](https://github.com/Shopify/slate).
 
     yarn start
 
-## Previewing Theme on shopterra-inc.myshopify.com (extsubs@shopterra.com, newyork1!)
+## Previewing Theme on shopterra-inc.myshopify.com
 
     Sales Channels - Online Store > Themes
     Actions > Preview
@@ -27,3 +27,8 @@ Installing Slate is really straight forward, make sure you have the latest versi
 
 * `slate watch -e development` - watches for changes and uploads on development environment (Slate-Dev).
 * `slate deploy -e production` - watches for changes and uploads on production environment (Slate).
+
+
+## Additional Template
+
+More to come...

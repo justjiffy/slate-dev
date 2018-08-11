@@ -55,6 +55,7 @@ h2, h3, a {
         top: 0;
         bottom: 0;
         margin: auto;
+        z-index: 0;
       }
     }
     div {
@@ -445,4 +446,29 @@ figure {
       margin-bottom: 15px;
     }
   }
+}
+
+.welcome {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: white;
+  box-shadow: 2px 2px 2px black;
+  text-align: center;
+  transform: translateY(-120%);
+  transition: all 1s linear;
+  z-index: 100;
+
+  .close {
+    width: 20px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+}
+
+.scroll {
+  transform: translateY(0);
 }

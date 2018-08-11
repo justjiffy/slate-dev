@@ -126,7 +126,7 @@ form {
   * {
     font-size: 16px;
     padding: $padding;
-    margin: calc(#{$padding} / 2) 0;
+    // margin: calc(#{$padding} / 2) 0;
   }
   @include desktop() {
     flex-direction: row;
@@ -138,14 +138,9 @@ fieldset {
 }
 input, textarea, .file {
   width: 100%;
-  border-radius: 36px;
   text-align: center;
   border: 1px solid $formBorder;
   color: $formPlaceholder;
-  @include desktop() {
-    width: 60%;
-    margin: calc(#{$padding} / 2 ) $padding;
-  }
   &:focus {
     outline: none;
     border: 1px solid $teal;

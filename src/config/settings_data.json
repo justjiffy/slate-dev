@@ -40,6 +40,9 @@
       },
       "content_for_index": [
         "featured-collection"
+      ],
+      "content_for_vendor": [
+        "vendor-collection"
       ]
     }
   }
