@@ -63,7 +63,8 @@
       <span>{{ 'product_view_3.png' | asset_url | img_tag: "3"}}</span>
     </p>
 
-    {% for product in collection.products %}
+    <div class="product-list">
+      {% for product in collection.products %}
       <div class="product">
         <p>
           <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
@@ -112,6 +113,7 @@
           </span>
         </p>
       </div>
+    </div>
 
     {% else %}
       {% if collection.handle == 'all' and collection.all_vendors.size == 0 and collection.all_types.size == 0 %}

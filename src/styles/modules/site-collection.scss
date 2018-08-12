@@ -54,6 +54,7 @@
 .bottom-row {
   display: flex;
   justify-content: space-between;
+  margin-top: 50px;
 }
 .products-container {
   width: 826px;
@@ -94,6 +95,10 @@
   width: 33%;
   text-align: center;
 
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
   .featured-img {
     height: 200px;
     margin: 10px 0 20px 0;

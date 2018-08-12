@@ -1,45 +1,113 @@
 <div class="filters">
   <div class="section">
     <h1>Seller Categories</h1>
-    <p>Personal Care <span>{{ "icon_downarrow.png" | asset_url | img_tag: "down"}}</span></p>
-    <p>Home Care <span>{{ "icon_downarrow.png" | asset_url | img_tag: "down"}}</span></p>
-    <p>Nutriments <span>{{ "icon_downarrow.png" | asset_url | img_tag: "down"}}</span></p>
+    <p>Personal Care <span>{{ "icon_downarrow.png" | asset_url | img_tag: "toggle" }}</span></p>
+    <p>Home Care <span>{{ "icon_downarrow.png" | asset_url | img_tag: "toggle" }}</span></p>
+    <p>Nutriments <span>{{ "icon_downarrow.png" | asset_url | img_tag: "toggle" }}</span></p>
   </div>
 
   <div class="section">
     <h1>Seller Filters</h1>
 
-    <p>Price</p>
+    <div class="filter">
+      <p>Price  <span>{{ "icon_downarrow.png" | asset_url | img_tag: "toggle", "open" }}</span></p>
+      <form>
+        $<input type="number" placeholder="20"/> - &nbsp;&nbsp;&nbsp; $<input type="number" placeholder="95" />
+      </form>
+      <div class="faux-slider">
+        <span class="track"></span>
+        <span class="slider left"></span>
+        <span class="slider right"></span>
+      </div>
+    </div>
+
+    <div class="filter">
+        <p>Good For You <span>{{ "icon_downarrow.png" | asset_url | img_tag: "toggle", "open" }}</span></p>
+    <div class='filter-rating'>
+      {{ "rating_good.png" | asset_url | img_tag: 'rating' }}
+      {{ "rating_good.png" | asset_url | img_tag: 'rating' }}
+      {{ "rating_good.png" | asset_url | img_tag: 'rating' }}
+      {{ "rating_good.png" | asset_url | img_tag: 'rating' }}
+      {{ "rating_good.png" | asset_url | img_tag: 'rating', 'grayscale' }}
+      <span> & Up </span>
+    </div>
+    <div class="faux-slider">
+      <span class="track"></span>
+      <span class="slider left"></span>
+      <span class="slider right"></span>
+    </div>
+  </div>
+
+  <div class="filter">
+    <p>Kind To Earth <span>{{ "icon_downarrow.png" | asset_url | img_tag: "toggle", "open" }}</span></p>
+    <div class='filter-rating'>
+      {{ "rating_kind.png" | asset_url | img_tag: 'rating' }}
+      {{ "rating_kind.png" | asset_url | img_tag: 'rating' }}
+      {{ "rating_kind.png" | asset_url | img_tag: 'rating' }}
+      {{ "rating_kind.png" | asset_url | img_tag: 'rating' }}
+      {{ "rating_kind.png" | asset_url | img_tag: 'rating', 'grayscale' }}
+      <span> & Up </span>
+    </div>
+    <div class="faux-slider">
+      <span class="track"></span>
+      <span class="slider left"></span>
+      <span class="slider right"></span>
+    </div>
+  </div>
+
+  <div class="filter">
+    <p>Customer Ratings <span>{{ "icon_downarrow.png" | asset_url | img_tag: "toggle", "open" }}</span></p>
+    <div class='filter-rating'>
+      {{ "rating_customer.png" | asset_url | img_tag: 'rating' }}
+      {{ "rating_customer.png" | asset_url | img_tag: 'rating' }}
+      {{ "rating_customer.png" | asset_url | img_tag: 'rating' }}
+      {{ "rating_customer.png" | asset_url | img_tag: 'rating' }}
+      {{ "rating_customer.png" | asset_url | img_tag: 'rating' }}
+      <span> & Up </span>
+    </div>
+    <div class="faux-slider">
+      <span class="track"></span>
+      <span class="slider left"></span>
+      <span class="slider right"></span>
+    </div>
+  </div>
+
+  <div class="filter">
+    <p>Recycle Options <span>{{ "icon_downarrow.png" | asset_url | img_tag: "toggle", "open" }}</span></p>
     <form>
-      $<input type="number" placeholder="20"/> - &nbsp;&nbsp;&nbsp; $<input type="number" placeholder="95" />
+      <input type="checkbox" /><label for="scales">PVC Free</label>
+      <input type="checkbox" /><label for="scales">PCW Recycled</label>
+      <input type="checkbox" /><label for="scales">Recyclable</label>
+      <input type="checkbox" /><label for="scales">Recycled Packagin</label>
+      <input type="checkbox" /><label for="scales">Sustainable Recycle</label>
+      <a href="#">+ More filter options</a>
     </form>
-    <div class="faux-slider">
-      <span class="track"></span>
-      <span class="slider left"></span>
-      <span class="slider right"></span>
+  </div>
+
+
+  <div class="filter">
+    <p>Allergens Ingredients <span>{{ "icon_downarrow.png" | asset_url | img_tag: "toggle", "open" }}</span></p>
+    <form>
+      <input type="checkbox" /><label for="scales">Allergen Free</label>
+      <input type="checkbox" /><label for="scales">Gluten Free</label>
+      <input type="checkbox" /><label for="scales">Hypo-Allergen Free</label>
+      <input type="checkbox" /><label for="scales">Phthalates Free</label>
+      <input type="checkbox" /><label for="scales">Soy Free</label>
+      <a href="#">+ More filter options</a>
+    </form>
+  </div>
+
+    <div class="filter>">
+      <p>Filter Category 1 <span>{{ "icon_downarrow.png" | asset_url | img_tag: "toggle"}}</span></p>
     </div>
 
-    <p>Good For You <span>{{ "icon_downarrow.png" | asset_url | img_tag: "down"}}</span></p>
-    <div class="faux-slider">
-      <span class="track"></span>
-      <span class="slider left"></span>
-      <span class="slider right"></span>
+    <div class="filter>">
+      <p>Filter Category 2 <span>{{ "icon_downarrow.png" | asset_url | img_tag: "toggle"}}</span></p>
     </div>
 
-    <p>Kind To Earth <span>{{ "icon_downarrow.png" | asset_url | img_tag: "down"}}</span></p>
-    <div class="faux-slider">
-      <span class="track"></span>
-      <span class="slider left"></span>
-      <span class="slider right"></span>
+    <div class="filter>">
+      <p>Filter Category 3 <span>{{ "icon_downarrow.png" | asset_url | img_tag: "toggle"}}</span></p>
     </div>
 
-    <p>Customer Ratings <span>{{ "icon_downarrow.png" | asset_url | img_tag: "down"}}</span></p>
-    <div class="faux-slider">
-      <span class="track"></span>
-      <span class="slider left"></span>
-      <span class="slider right"></span>
-    </div>
-  </p?>
-  </p?>
   </div>
 </div>
