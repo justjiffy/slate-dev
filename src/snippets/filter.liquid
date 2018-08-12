@@ -1,10 +1,45 @@
 <div class="filters">
-  <h1>Seller Categories</h1>
+  <div class="section">
+    <h1>Seller Categories</h1>
+    <p>Personal Care <span>{{ "icon_downarrow.png" | asset_url | img_tag: "down"}}</span></p>
+    <p>Home Care <span>{{ "icon_downarrow.png" | asset_url | img_tag: "down"}}</span></p>
+    <p>Nutriments <span>{{ "icon_downarrow.png" | asset_url | img_tag: "down"}}</span></p>
+  </div>
 
-  <p>Personal Care <span>{{ "icon_downarrow.png" | asset_url | img_tag: "down"}}</span></p>
-  <p>Home Care <span>{{ "icon_downarrow.png" | asset_url | img_tag: "down"}}</span></p>
-  <p>Nutriments <span>{{ "icon_downarrow.png" | asset_url | img_tag: "down"}}</span></p>
+  <div class="section">
+    <h1>Seller Filters</h1>
 
-  <h1>Seller Filters</h1>
-  <p>Price <span>{{ "icon_downarrow.png" | asset_url | img_tag: "down"}}</span></p>
+    <p>Price</p>
+    <form>
+      $<input type="number" placeholder="20"/> - &nbsp;&nbsp;&nbsp; $<input type="number" placeholder="95" />
+    </form>
+    <div class="faux-slider">
+      <span class="track"></span>
+      <span class="slider left"></span>
+      <span class="slider right"></span>
+    </div>
+
+    <p>Good For You <span>{{ "icon_downarrow.png" | asset_url | img_tag: "down"}}</span></p>
+    <div class="faux-slider">
+      <span class="track"></span>
+      <span class="slider left"></span>
+      <span class="slider right"></span>
+    </div>
+
+    <p>Kind To Earth <span>{{ "icon_downarrow.png" | asset_url | img_tag: "down"}}</span></p>
+    <div class="faux-slider">
+      <span class="track"></span>
+      <span class="slider left"></span>
+      <span class="slider right"></span>
+    </div>
+
+    <p>Customer Ratings <span>{{ "icon_downarrow.png" | asset_url | img_tag: "down"}}</span></p>
+    <div class="faux-slider">
+      <span class="track"></span>
+      <span class="slider left"></span>
+      <span class="slider right"></span>
+    </div>
+  </p?>
+  </p?>
+  </div>
 </div>
