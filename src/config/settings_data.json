@@ -28,6 +28,12 @@
             "collection": "frontpage"
           }
         },
+        "featured-seller": {
+          "type": "featured-seller",
+          "settings": {
+            "collection": "featured"
+          }
+        },
         "latest-additions": {
           "type": "latest-additions",
           "settings": {

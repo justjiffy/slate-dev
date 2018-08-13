@@ -6,7 +6,7 @@
   <header role="banner" class="collection-details">
     {% if collection.image %}{{ collection.image | img_url: 'medium' | img_tag: collection.title, "vendor-logo" }}{% endif %}
 
-    {% if collection.all_tags.size >= 0 %}
+    {% if collection.all_products_count > 0 %}
       <div>
         <h1>{{ collection.title }}</h1>
         {% if collection.description != blank %}
@@ -15,7 +15,7 @@
         </div>
         {% endif %}
       </div>
-      <ul>
+      <!-- <ul>
         {% for tag in collection.all_tags %}
           {% if current_tags contains tag %}
             <li class="active">
@@ -27,41 +27,45 @@
             </li>
           {% endif %}
         {% endfor %}
-      </ul>
+      </ul> -->
     {% endif %}
   </header>
 
 
   <div class="bottom-row">
 
-  {% include 'filter' %}
+  {% if collection.all_products_count > 0 %}
+    {% include 'filter' %}
+  {% endif %}
 
-  <div class="products-container">
-    <div class="products-header">
-      <h2>Products <span>({{ collection.all_products_count }})</span></h2>
-      <form action="/search" method="get" role="search">
-        <label for="Search" class="label-hidden">
-        {{ 'general.search.placeholder' | t }}
-        </label>
-        <input type="search"
-             name="q"
-             id="Search"
-             value="{{ search.terms | escape }}"
-             placeholder="Search for things good for you and kind to earth">
-        <button type="submit" class="btn">
-        {% include 'icon-search' %}
-        <span class="icon-fallback-text">{{ 'general.search.submit' | t }}</span>
-        </button>
-      </form>
-    </div>
+  {% if collection.all_products_count > 0 %}
+    <div class="products-container">
+      <div class="products-header">
+        <h2>Products <span>({{ collection.all_products_count }})</span></h2>
+        <form action="/search" method="get" role="search">
+          <label for="Search" class="label-hidden">
+          {{ 'general.search.placeholder' | t }}
+          </label>
+          <input type="search"
+               name="q"
+               id="Search"
+               value="{{ search.terms | escape }}"
+               placeholder="Search for things good for you and kind to earth">
+          <button type="submit" class="btn">
+          {% include 'icon-search' %}
+          <span class="icon-fallback-text">{{ 'general.search.submit' | t }}</span>
+          </button>
+        </form>
+      </div>
 
-    <p class="alphabetical">
-      Sort by alphabetical: A to Z
-      <span>{{ 'icon_downarrow.png' | asset_url | img_tag: "down"}}</span>
-      <span>{{ 'product_view_1.png' | asset_url | img_tag: "1"}}</span>
-      <span>{{ 'product_view_2.png' | asset_url | img_tag: "2"}}</span>
-      <span>{{ 'product_view_3.png' | asset_url | img_tag: "3"}}</span>
-    </p>
+      <p class="alphabetical">
+        Sort by alphabetical: A to Z
+        <span>{{ 'icon_downarrow.png' | asset_url | img_tag: "down"}}</span>
+        <span>{{ 'product_view_1.png' | asset_url | img_tag: "1"}}</span>
+        <span>{{ 'product_view_2.png' | asset_url | img_tag: "2"}}</span>
+        <span>{{ 'product_view_3.png' | asset_url | img_tag: "3"}}</span>
+      </p>
+    {% endif %}
 
     <div class="product-list">
       {% for product in collection.products %}
@@ -113,7 +117,6 @@
           </span>
         </p>
       </div>
-    </div>
 
     {% else %}
       {% if collection.handle == 'all' and collection.all_vendors.size == 0 and collection.all_types.size == 0 %}
@@ -132,8 +135,7 @@
           </p>
         {% endfor %}
       {% else %}
-      <div class="prelaunch">
-
+      <div class="prelaunch" style="margin-top: -100px;">
         <h1>Thanks for your interest!</h1>
         <p>We are working away to bring you top quality natural and eco-friendly {{ collection.title | downcase }} products from passionate artisans who also care deeply about your well-being and keeping our planet clean. Please sign up <a href="/">here</a> to be notified of our launch.</p>
         <p>
@@ -148,6 +150,8 @@
       {% endif %}
 
     {% endfor %}
+  </div>
+
   </div>
 </div>
 

@@ -97,6 +97,7 @@ h2, h3, a {
 //button, button... who styled the button!?
 .btn-lg {
   background-color: $color-primary;
+  display: block;
   border: none;
   width: 100%;
   margin-top: 30px;
@@ -251,8 +252,16 @@ figure {
   margin-top: 150px;
   text-align: center;
 
+ figure {
+   align-items: flex-start;
+   justify-content: space-between;
+ }
   .padded {
     padding: 10px 30px 0 0;
+  }
+
+  .featured-colletion {
+    display: flex;
   }
   h2 {
     font-weight: 300;
@@ -262,12 +271,21 @@ figure {
   }
 
   .mf-item {
-    border-color: #35a6b0;
+    border: 1px solid #35a6b0;
     padding-bottom: 20px;
+    width: 255px;
+    height: 284px;
+
+    img {
+      height: 200px;
+    }
 
     &:nth-child(1) {
       margin-right: 30px;
     }
+  }
+  a.button {
+    line-height: 70px;
   }
 }
 

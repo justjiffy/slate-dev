@@ -1,0 +1,84 @@
+
+<div class="manufacturers">
+  <h2>
+    Our manufacturers of the week.<br />
+    Customers love their products and their products support the planet and your natural lifestyle.
+  </h2>
+{%- assign collection = collections["featured"] -%}
+
+<figure>
+  {{ section.settings.homepage-image | asset_url | img_tag: "Manufacturer", 'padded' }}
+  <figcaption>
+    {% if section.settings.title != blank %}
+      <h3>{{ section.settings.title | escape }}</h3>
+    {% endif %}
+    <span>
+      {{ 'star.png' | asset_url | img_tag: 'star '}}
+      {{ 'star.png' | asset_url | img_tag: 'star '}}
+      {{ 'star.png' | asset_url | img_tag: 'star '}}
+      {{ 'star.png' | asset_url | img_tag: 'star '}}
+      {{ 'star.png' | asset_url | img_tag: 'star '}}
+    </span>
+    <p>{{ section.settings.description }}</p>
+
+    <span class="featured-colletion">
+      {% for product in collection.products limit: 2 %}
+      <div class="mf mf-item">
+        <p>{{ product.title }}</p>
+        <a href="{{ product.url | within: collection }}">
+
+          {% if product.featured_image != blank %}
+            {{ product.featured_image.src | img_url: '480x480' | img_tag: product.title }}
+          {% endif %}
+        </a>
+      </div>
+      {% endfor %}
+    </span>
+    <a href="{{ section.settings.url }}" class='button btn-lg'>Visit {{ collection.title }}</a>
+  </figcaption>
+</figure>
+</div>
+
+{% schema %}
+  {
+    "name": "Featured seller",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Ana Sinclair"
+      },
+      {
+        "type": "text",
+        "id": "description",
+        "label": "Description",
+        "default": "Ana’s shop has many organic daily care products, from a large variety of soaps and shampoos, to face..."
+      },
+      {
+        "type": "text",
+        "id": "url",
+        "label": "Url",
+        "default": "/collections/featured"
+      },
+      {
+        "type": "text",
+        "id": "homepage-image",
+        "label": "Homepage Image",
+        "default": "manufacturer_sinclair.png"
+      },
+      {
+        "id": "collection",
+        "type": "collection",
+        "label": "Collection"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Featured seller",
+        "category": "Collection"
+      }
+    ]
+  }
+
+{% endschema %}
