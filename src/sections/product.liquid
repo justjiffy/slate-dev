@@ -69,16 +69,18 @@
 
     <p>Availability: <span class="stock">In stock</span></p>
 
-    <p>Seller: {{ product.vendor }}</p>
+    <div>
+      <p>Seller: <a style="display: inline" href="{{ collections[coll_handle].url }}">{{ product.vendor }}</a></p>
 
-    <div class="contact">
-      {% assign coll_handle = "featured" | handleize %}
-      <a href="{{ collections[coll_handle].url }}">
-        {{ collections[coll_handle].image | collection_img_url: 'small' | img_tag: "vendor logo", "logo" }}
-      </a>
-      <div class="links">
-        <a href="{{ collections[coll_handle].url }}">Visit Store</a>
-        <a href="#">Contact Seller</a>
+      <div class="contact">
+        {% assign coll_handle = "featured" | handleize %}
+        <a href="{{ collections[coll_handle].url }}">
+          {{ collections[coll_handle].image | collection_img_url: 'small' | img_tag: "vendor logo", "logo" }}
+        </a>
+        <div class="links">
+          <a href="{{ collections[coll_handle].url }}">Visit Store</a>
+          <a href="#">Contact Seller</a>
+        </div>
       </div>
     </div>
 
