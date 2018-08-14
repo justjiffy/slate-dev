@@ -89,16 +89,17 @@
   }
 }
 
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+}
 .product {
   border: 1px solid #d5dde0;
   border-radius: 4px;
-  width: 30%;
+  width: 30.5%;
+  margin-bottom: 30px;
   text-align: center;
 
-  .product-list {
-    display: flex;
-    flex-wrap: wrap;
-  }
   .featured-img {
     height: 200px;
     margin: 10px 0 20px 0;

@@ -1,4 +1,4 @@
-<div data-section-id="{{ section.id }}" data-section-type="product" data-enable-history-state="true" itemscope itemtype="http://schema.org/Product">
+<div class="Product" data-section-id="{{ section.id }}" data-section-type="product" data-enable-history-state="true" itemscope itemtype="http://schema.org/Product">
 
   {%- assign current_variant = product.selected_or_first_available_variant -%}
   {%- assign featured_image = current_variant.featured_image | default: product.featured_image -%}
@@ -9,137 +9,22 @@
   <meta itemprop="image" content="{{ featured_image | img_url: '600x600' }}">
   <meta itemprop="description" content="{{ product.description | strip_html | escape }}">
 
-  <div class="prelaunch">
-    <h1>Thanks for your interest!</h1>
-    <p>We are working away to bring you top quality natural and eco-friendly products from passionate artisans who also care deeply about your well-being and keeping our planet clean. Please sign up <a href="/">here</a> to be notified of our launch.</p>
-    <p>
-      Here are some examples of the type of products you will see on Shopterra:
-    </p>
-    <div class="product-list">
-      <ul style="color: #5e6568;">
-        <li><strong style="color: #35a6b0;">Home Care</strong></li>
-        <li>Airfreshners</li>
-        <li>Blush On</li>
-        <li>Bug Repellant</li>
-        <li>Candles</li>
-        <li>Carpet Care</li>
-        <li>Carpet Deodorizers</li>
-        <li>Dinfectants</li>
-        <li>Dish Cleaner</li>
-        <li>Drain Openers</li>
-        <li>Fabric Softner</li>
-        <li>Face Wash</li>
-        <li>First Aid</li>
-        <li>Floor Cleaners</li>
-        <li>Gardening Supplies</li>
-        <li>Household Cleaner</li>
-        <li>Laundry Detergent</li>
-        <li>Light Bulbs</li>
-        <li>Lint Remover</li>
-        <li>Make Up Remover</li>
-        <li>Mounthwash</li>
-        <li>Oven Cleaner</li>
-        <li>Stain Remover</li>
-        <li>Washing Machine Cleaners</li>
-        <li>Wood Care</li>
-        <li>Pest Control</li>
-      </ul>
-      <ul style="color: #5e6568;">
-        <li><strong style="color: #35a6b0;">Personal Care</strong></li>
-        <li>Anti-aging</li>
-        <li>Antiperspirants</li>
-        <li>Aroma Therapy</li>
-        <li>Baby Balm</li>
-        <li>Baby Bath </li>
-        <li>Baby Cream</li>
-        <li>Baby Diaper Rash Cream</li>
-        <li>Baby Wipe</li>
-        <li>Bath Salt</li>
-        <li>Beauty Aids</li>
-        <li>Body Wash</li>
-        <li>Breath Fresheners</li>
-        <li>Bug Repellant</li>
-        <li>Cleansers</li>
-        <li>Conditioner</li>
-        <li>Detangle</li>
-        <li>Baby Diaper</li>
-        <li>Adult Diaper</li>
-        <li>Elixirs</li>
-        <li>Essential Oil</li>
-        <li>Exfoliators</li>
-        <li>Eye Care</li>
-        <li>Foot Care</li>
-        <li>Fragrances</li>
-        <li>Hair Care</li>
-        <li>Hair Color</li>
-        <li>Hair Removal</li>
-        <li>Hand Cream</li>
-        <li>Hand Lotion</li>
-        <li>Hand Sanitizers</li>
-        <li>Hand Soap</li>
-        <li>Lice Treatment</li>
-        <li>Lip Care</li>
-        <li>Lip Color</li>
-        <li>Lotion</li>
-        <li>Mashcara</li>
-        <li>Masks</li>
-        <li>Massage Creams</li>
-        <li>Moisturizer</li>
-        <li>Mounthwash</li>
-        <li>Nail Care</li>
-        <li>Nail Polish</li>
-        <li>Oral Care</li>
-        <li>Saving Cream</li>
-        <li>Saving Lotion</li>
-        <li>Serums</li>
-        <li>Shampoo</li>
-        <li>Shower Gel</li>
-        <li>Soap</li>
-        <li>Spa </li>
-        <li>Sunscreen</li>
-        <li>Toners</li>
-        <li>Tooth Brush</li>
-        <li>Tooth Paste</li>
-        <li>Wipes</li>
-        <li>Blush On</li>
-        <li>Make Up Remover</li>
-        <li>Face Wash</li>
-      </ul>
-      <ul style="color: #5e6568;">
-        <li><strong style="color: #35a6b0;">Pet Care</strong></li>
-        <li>Pet Bath Soap</li>
-        <li>Pet Cleansers</li>
-        <li>Pet Conditioner</li>
-        <li>Pet Dental Care</li>
-        <li>Pet Deodorizer</li>
-        <li>Pet Ear Care</li>
-        <li>Pet Odor Control</li>
-        <li>Pet Wipes</li>
-        <li>Pet Shampoo</li>
-        <li>Pet Skin Care</li>
-        <li>Tick Treatment</li>
-        <li>Pet Toothpaste</li>
-      </ul>
-      <ul style="color: #5e6568;">
-        <li><strong style="color: #35a6b0;">Nutriments</strong></li>
-        <li>Botanical extracts</li>
-        <li>Culinary herbs</li>
-        <li>Electrolytes</li>
-        <li>Energy Infusion</li>
-        <li>Extracts</li>
-        <li>Flower essences/remedies</li>
-        <li>Immune system Enhancer</li>
-        <li>Tea</li>
-        <li>Tonics</li>
-      </ul>
+  <div class="details">
+    <div class="image-container">
+      <div class="image">
+        {% if featured_image != blank %}
+        <img src="{{ featured_image | img_url: '480x480' }}" alt="{{ featured_image.alt | escape }}" data-product-featured-image>
+        {% endif %}
+      </div>
+      <span class="social">
+        <a href="#">Tweet</a>
+        <a href="#">Share</a>
+        <a href="#">Google+</a>
+        <a href="#">Pinterest</a>
+      </span>
     </div>
 
-
-  <!-- {% if featured_image != blank %}
-    <img src="{{ featured_image | img_url: '480x480' }}" alt="{{ featured_image.alt | escape }}" data-product-featured-image>
-  {% endif %}
-
-  {% if product.images.size > 1 %}
+  <!-- {% if product.images.size > 1 %}
     <ul>
       {% for image in product.images %}
         <li>
@@ -149,85 +34,138 @@
         </li>
       {% endfor %}
     </ul>
-  {% endif %}
+  {% endif %} -->
 
-  <h1>{{ product.title }}</h1>
-  <p>{{ product.vendor }}</p> -->
+  <div class="info">
+    <div>
+      <h1>{{ product.title }}</h1>
+      <a href="#"> <3 Add to Wishlist</a>
+    </div>
 
-  <!-- <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-    <meta itemprop="priceCurrency" content="{{ shop.currency }}">
-    <meta itemprop="price" content="{{ current_variant.price | divided_by: 100.00 }}">
-    <link itemprop="availability" href="http://schema.org/{% if current_variant.available %}InStock{% else %}OutOfStock{% endif %}">
+    <div data-price-wrapper>
+      <span data-product-price class="price">
+        {{ current_variant.price | money }}
+      </span>
 
-    <form action="/cart/add" method="post" enctype="multipart/form-data">
-      {% unless product.has_only_default_variant %}
-        {% for option in product.options_with_values %}
-          <div class="selector-wrapper js">
-            <label for="SingleOptionSelector-{{ forloop.index0 }}">
-              {{ option.name }}
-            </label>
+      {% if product.compare_at_price_max > product.price %}
+        <span class="visually-hidden" data-compare-text>{{ 'products.product.regular_price' | t }}</span>
+        <s data-compare-price>
+          {% if current_variant.compare_at_price > current_variant.price %}
+            {{ current_variant.compare_at_price | money }}
+          {% endif %}
+        </s>
+      {% endif %}
+      <span class="shipping">+ tax & shipping</span>
+    </div>
 
-            <select
-              id="SingleOptionSelector-{{ forloop.index0 }}"
-              data-single-option-selector
-              data-index="option{{ option.position }}">
-              {% for value in option.values %}
-                <option
-                  value="{{ value | escape }}"
-                  {% if option.selected_value == value %}selected="selected"{% endif %}>
-                    {{ value }}
-                </option>
-              {% endfor %}
-            </select>
-          </div>
-        {% endfor %}
-      {% endunless %}
+    <div class='filter-rating'>
+      <a href="#reviews">Customer Reviews (9)</a>
+      {{ "rating_customer.png" | asset_url | img_tag: 'rating' }}
+      {{ "rating_customer.png" | asset_url | img_tag: 'rating' }}
+      {{ "rating_customer.png" | asset_url | img_tag: 'rating' }}
+      {{ "rating_customer.png" | asset_url | img_tag: 'rating' }}
+      {{ "rating_customer.png" | asset_url | img_tag: 'rating' }}
+    </div>
 
-      <select name="id" class="no-js" data-product-select>
-        {% for variant in product.variants %}
-          <option
-            {% if variant == current_variant %}selected="selected"{% endif %}
-            {% unless variant.available %}disabled="disabled"{% endunless %}
-            value="{{ variant.id }}">
-              {{ variant.title }}
-          </option>
-        {% endfor %}
-      </select>
+    <p>Availability: <span class="stock">In stock</span></p>
 
-      <label for="Quantity">{{ 'products.product.quantity' | t }}</label>
-      <input type="number" id="Quantity" name="quantity" value="1" min="1">
+    <p>Seller: {{ product.vendor }}</p>
 
-      <div data-price-wrapper>
-        <span data-product-price>
-          {{ current_variant.price | money }}
-        </span>
-
-        {% if product.compare_at_price_max > product.price %}
-          <span class="visually-hidden" data-compare-text>{{ 'products.product.regular_price' | t }}</span>
-          <s data-compare-price>
-            {% if current_variant.compare_at_price > current_variant.price %}
-              {{ current_variant.compare_at_price | money }}
-            {% endif %}
-          </s>
-        {% endif %}
+    <div class="contact">
+      {% assign coll_handle = "featured" | handleize %}
+      <a href="{{ collections[coll_handle].url }}">
+        {{ collections[coll_handle].image | collection_img_url: 'small' | img_tag: "vendor logo", "logo" }}
+      </a>
+      <div class="links">
+        <a href="{{ collections[coll_handle].url }}">Visit Store</a>
+        <a href="#">Contact Seller</a>
       </div>
+    </div>
 
-      <button
-        type="submit"
-        name="add"
-        data-add-to-cart
-        {% unless current_variant.available %}disabled="disabled"{% endunless %}>
-          <span data-add-to-cart-text>
-            {% if current_variant.available %}
-              {{ 'products.product.add_to_cart' | t }}
-            {% else %}
-              {{ 'products.product.sold_out' | t }}
-            {% endif %}
-          </span>
-      </button>
-    </form>
+    <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+      <meta itemprop="priceCurrency" content="{{ shop.currency }}">
+      <meta itemprop="price" content="{{ current_variant.price | divided_by: 100.00 }}">
+      <link itemprop="availability" href="http://schema.org/{% if current_variant.available %}InStock{% else %}OutOfStock{% endif %}">
 
-  </div> -->
+      <form action="/cart/add" method="post" enctype="multipart/form-data">
+        {% unless product.has_only_default_variant %}
+          {% for option in product.options_with_values %}
+            <div class="selector-wrapper js">
+              <label for="SingleOptionSelector-{{ forloop.index0 }}">
+                {{ option.name }}
+              </label>
+
+              <select
+                id="SingleOptionSelector-{{ forloop.index0 }}"
+                data-single-option-selector
+                data-index="option{{ option.position }}">
+                {% for value in option.values %}
+                  <option
+                    value="{{ value | escape }}"
+                    {% if option.selected_value == value %}selected="selected"{% endif %}>
+                      {{ value }}
+                  </option>
+                {% endfor %}
+              </select>
+            </div>
+          {% endfor %}
+        {% endunless %}
+
+        <select name="id" class="no-js" data-product-select>
+          {% for variant in product.variants %}
+            <option
+              {% if variant == current_variant %}selected="selected"{% endif %}
+              {% unless variant.available %}disabled="disabled"{% endunless %}
+              value="{{ variant.id }}">
+                {{ variant.title }}
+            </option>
+          {% endfor %}
+        </select>
+
+        <label for="Quantity">{{ 'products.product.quantity' | t }}</label>
+        <input type="number" id="Quantity" name="quantity" value="1" min="1" step="1">
+
+
+
+        <button
+          class="btn-lg"
+          type="submit"
+          name="add"
+          data-add-to-cart
+          {% unless current_variant.available %}disabled="disabled"{% endunless %}>
+            <span data-add-to-cart-text>
+              {% if current_variant.available %}
+                {{ 'products.product.add_to_cart' | t }}
+              {% else %}
+                {{ 'products.product.sold_out' | t }}
+              {% endif %}
+            </span>
+        </button>
+        <span>
+          <a href="#">Buy Now With 1-Click</a>
+          |
+          <a href="#">Add to Comparison List</a>
+        </span>
+      </form>
+
+    </div>
+  </div>
+  <div class="score">
+    <h1>Shopterra Rating</h1>
+    <h2>Good For You</h2>
+    <p>Our “Good For You” rating reflects how safe a product is for use by you and your family, and how naturally-derived the ingredients are.</p>
+    <a href="/pages/rating-system">Learn More</a>
+    <h2>Kind to Earth</h2>
+    <p>Our “Kind to Earth” rating reflects the degree to which a product and packaging affects the environment during use and disposal.</p>
+    <a href="/pages/rating-system">Learn More</a>
+  </div>
+
+</div>
+
+<div class="ratings">
+  <h1>Ratings...</h1>
+</div>
+
   {% unless product == empty %}
     <script type="application/json" data-product-json>
       {{ product | json }}
