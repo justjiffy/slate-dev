@@ -153,19 +153,76 @@
     </div>
   </div>
   <div class="score">
-    <h1>Shopterra Rating</h1>
-    <h2>Good For You</h2>
-    <p>Our “Good For You” rating reflects how safe a product is for use by you and your family, and how naturally-derived the ingredients are.</p>
-    <a href="/pages/rating-system">Learn More</a>
-    <h2>Kind to Earth</h2>
-    <p>Our “Kind to Earth” rating reflects the degree to which a product and packaging affects the environment during use and disposal.</p>
-    <a href="/pages/rating-system">Learn More</a>
+    {{ "shopterrarating.png" | asset_url | img_tag: "Shopterra Rating" }}
+    <div class="good">
+      <h2>Good For You</h2>
+      <div class='filter-rating'>
+        {{ "rating_good.png" | asset_url | img_tag: 'rating' }}
+        {{ "rating_good.png" | asset_url | img_tag: 'rating' }}
+        {{ "rating_good.png" | asset_url | img_tag: 'rating' }}
+        {{ "rating_good.png" | asset_url | img_tag: 'rating' }}
+        {{ "rating_good.png" | asset_url | img_tag: 'rating', 'grayscale' }}
+        <span> 4/5 </span>
+      </div>
+      <p>Our “Good For You” rating reflects how safe a product is for use by you and your family, and how naturally-derived the ingredients are.</p>
+      <a href="/pages/rating-system">Learn More</a>
+    </div>
+    <div class="kind">
+      <h2>Kind to Earth</h2>
+      <div class='filter-rating'>
+        {{ "rating_kind.png" | asset_url | img_tag: 'rating' }}
+        {{ "rating_kind.png" | asset_url | img_tag: 'rating' }}
+        {{ "rating_kind.png" | asset_url | img_tag: 'rating' }}
+        {{ "rating_kind.png" | asset_url | img_tag: 'rating' }}
+        {{ "rating_kind.png" | asset_url | img_tag: 'rating', 'grayscale' }}
+      <span> 4/5 </span>
+      </div>
+      <p>Our “Kind to Earth” rating reflects the degree to which a product and packaging affects the environment during use and disposal.</p>
+      <a href="/pages/rating-system">Learn More</a>
+    </div>
   </div>
 
 </div>
 
-<div class="ratings">
-  <h1>Ratings...</h1>
+<div class="why-we-love">
+  <div class="left">
+    <h2>Why we love this product</h2>
+    <p>
+      Busy  Australian bees. Try saying that five times fast. They’re responsible for our      delicious, pure organic honey. We traveled all the way to the wildflower fields of Brazil and worked with local farmers to harvest the golden nectar. To maintain its raw natural pollens and pure unfiltered flavor, we heat it just enough to pour into the jar. Just the way the bees intended. Sweet!
+      Looking for 100% USDA certified organic raw honey? You've found it, and in a convenient 1kg jar that you can take on the go or stash at the office, in your locker.
+    </p>
+    <a href="#">Shipping & Returns</a>
+  </div>
+  <div class="right">
+    <h2>Most Recent Reviews</h2>
+    <div class="review">
+      <div class='filter-rating'>
+        <h3>Carl Jackson</h3>
+        {{ "rating_customer.png" | asset_url | img_tag: 'rating' }}
+        {{ "rating_customer.png" | asset_url | img_tag: 'rating' }}
+        {{ "rating_customer.png" | asset_url | img_tag: 'rating' }}
+        {{ "rating_customer.png" | asset_url | img_tag: 'rating' }}
+        {{ "rating_customer.png" | asset_url | img_tag: 'rating', 'grayscale' }}
+      </div>
+      <div class="comment">
+        <p>Great honey! Very delicious!</p>
+      </div>
+    </div>
+    <div class="review">
+      <div class='filter-rating'>
+        <h3>Sarah Mallon</h3>
+        {{ "rating_customer.png" | asset_url | img_tag: 'rating' }}
+        {{ "rating_customer.png" | asset_url | img_tag: 'rating' }}
+        {{ "rating_customer.png" | asset_url | img_tag: 'rating' }}
+        {{ "rating_customer.png" | asset_url | img_tag: 'rating' }}
+        {{ "rating_customer.png" | asset_url | img_tag: 'rating' }}
+      </div>
+      <div class="comment">
+        <p>Love this brand, very good for your health.</p>
+      </div>
+    </div>
+    <a href="#">View All Reviews</a>
+  </div>
 </div>
 
   {% unless product == empty %}
